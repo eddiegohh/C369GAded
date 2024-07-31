@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Payment Status</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container */
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Header */
+        header {
+            background: #e6f0ef;
+            padding: 20px 0;
+            border-bottom: 5px solid #e6f0ef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+        }
+
+        .hero {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .payment-status {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .payment-status.success {
+            color: #28a745;
+        }
+
+        .payment-status.failure {
+            color: #dc3545;
+        }
+
+        .btn {
+            background: linear-gradient(to right, #5cb85c, #4cae4c);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+            display: inline-block;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #4cae4c, #5cb85c);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+        }
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .footer-section p,
+        .footer-section ul,
+        .footer-section ul li {
+            font-size: 14px;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container1">
+            <h1>Transwease</h1>
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Payment Status</h1>
+            <p>Check the status of your recent payment below.</p>
+        </div>
+    </section>
+
+    <!-- Payment Status Section -->
+    <section class="content-section">
+        <div class="container">
+            <div id="paymentStatus" class="payment-status success">
+                <h2>Payment Successful</h2>
+                <p>Your payment has been processed successfully. Thank you for using Transwease.</p>
+                <button class="btn" onclick="window.location.href='services.html'">Back to Services</button>
+            </div>
+            <div id="paymentStatusFailure" class="payment-status failure" style="display: none;">
+                <h2>Payment Failed</h2>
+                <p>Unfortunately, your payment could not be processed. Please try again later or contact support.</p>
+                <button class="btn" onclick="window.location.href='payment.html'">Try Again</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulate payment processing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example: Simulate a payment status based on query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const paymentStatus = urlParams.get('status');
+
+            if (paymentStatus === 'success') {
+                document.getElementById('paymentStatus').style.display = 'block';
+                document.getElementById('paymentStatusFailure').style.display = 'none';
+            } else {
+                document.getElementById('paymentStatus').style.display = 'none';
+                document.getElementById('paymentStatusFailure').style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
+

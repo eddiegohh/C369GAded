@@ -1,0 +1,522 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background: #e6f0ef;
+    padding: 20px 0;
+    border-bottom: 5px solid #e6f0ef;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 16px;
+}
+body {
+    padding-top: 80px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Button */
+.btn {
+    background: linear-gradient(to right, #e74c3c, #f39c12);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    display: inline-block;
+    border-radius: 5px;
+}
+.btn:hover {
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+}
+
+/* Hero Section */
+.hero {
+    background: #70a5a5;
+    color: #fff;
+    text-align: left;
+    padding: 50px 0;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+.hero .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+.multi-line-heading {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: black;
+}
+.illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.illustration img {
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Signup Section */
+.signup-section,
+.login-section,
+.contactus-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+.signup-section h2,
+.login-section h2,
+.contactus-section h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #2c3e50;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 300px;
+    margin: 20px auto;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+.form-group input,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    background-color: #c4d7e1;
+}
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+.or-separator {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #666;
+}
+.or-separator span {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 0 10px;
+    position: relative;
+    top: -10px;
+}
+.singpass-btn {
+    background-color: #ff4d4d;
+    font-size: 24px;
+    color: #ff0000;
+    border: 2px solid #666666;
+    padding: 5px;
+    width: 180px;
+    height: 40px;
+}
+.singpass-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Offer Section */
+.offer,
+.personal-account {
+    background: #b0d3f0;
+    color: #333;
+    text-align: left;
+    padding: 50px 0;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+.offer-container,
+.account-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer-text,
+.account-text {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+.offer-text h2,
+.account-text h2 {
+    font-size: 36px;
+    color: #333;
+}
+.offer-text p,
+.account-text p {
+    font-size: 16px;
+    color: #333;
+}
+.offer-image,
+.account-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.offer-image img,
+.account-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Smooth Separator Line */
+.separator {
+    width: 90%;
+    height: 2px;
+    background: #333;
+    border: none;
+    margin: 50px auto;
+}
+
+/* Our Promises Section */
+.promises {
+    background: #70a5a5;
+    color: #333;
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.promises .container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.promises h2 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 40px;
+}
+.promise-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+.promise-icon {
+    flex: 0 0 50px;
+    margin-right: 20px;
+}
+.promise-icon img {
+    max-width: 100%;
+    height: auto;
+}
+.promise-text {
+    flex: 1;
+}
+.promise-text h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.promise-text p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer Section */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.footer-section p,
+.footer-section ul,
+.footer-section ul li {
+    font-size: 14px;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .hero .container,
+    .offer-container,
+    .account-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-text,
+    .offer-text,
+    .account-text {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .multi-line-heading {
+        font-size: 28px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    .illustration,
+    .offer-image,
+    .account-image {
+        height: auto;
+    }
+    .illustration img,
+    .offer-image img,
+    .account-image img {
+        max-height: 800px;
+    }
+    .promises .container {
+        align-items: flex-start;
+    }
+    .promise-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .promise-icon {
+        margin-bottom: 10px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Login Section */
+.login-section,
+.contactus-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+.login-section h2,
+.contactus-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #2c3e50;
+}
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.login-form,
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-form .form-group,
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+.login-form label,
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+.login-form input,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    background-color: #c4d7e1;
+}
+.login-form .btn,
+.contact-form .btn {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-form .btn:hover,
+.contact-form .btn:hover {
+    background-color: #ff3333;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.service {
+    background-color: #b8d1da;
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+.service:hover {
+    background-color: #99c1ce;
+}
+.options {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.options div {
+    background-color: #f0f4f8;
+    padding: 20px 40px;
+    margin: 5px 0;
+    border-radius: 5px;
+    flex: 1 0 45%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

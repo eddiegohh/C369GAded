@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Services</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            background-image: url('images/hap.jpg');
+            /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Transwease</h1>
+            <nav>
+                <ul>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="ewallet.html">E-wallet</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero bg-light py-5">
+            <div class="container">
+                <div class="hero-text text-center">
+                    <h2 class="multi-line-heading">Start Aligning Your Financial Transactions with Us for a Seamless, All-in-One Service Experience</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="header-content text-center my-4">
+        <h1 class="btn btn-outline-dark">EWALLET USED:</h1>
+        <a href="ewallet.html" class="btn btn-dark"><h1><b>TRANSWEASE</b></h1></a>
+        <div class="search-bar mt-3">
+            <label for="search">Search:</label>
+            <input type="text" id="search" class="form-control d-inline-block" placeholder="Search services..." style="width: 300px;">
+        </div>
+    </div>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="service" data-options="investment-options">INVESTMENT
+                    <div class="options investment-options">
+                        <div><a href="research_analysis.html">Research and Analysis</a></div>
+                        <div><a href="investment_advisory.html">Investment Advisory</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service" data-options="payment-options">PAYMENT
+                    <div class="options payment-options">
+                        <div><a href="payment.html">Online Payment</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service" data-options="transfers-options">TRANSFERS
+                    <div class="options transfers-options">
+                        <div><a href="transfers.html">Domestic / International Transfers</a></div>
+                        <div><a href="tracktransfer.html">Track Transfers</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service" data-options="insurance-options">INSURANCE
+                    <div class="options insurance-options">
+                        <div><a href="insurancepolicy.html">Policy Management</a></div>
+                        <div><a href="claimprocess.html">Claim Processing</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service" data-options="lending-options">LENDING
+                    <div class="options lending-options"> 
+                        <div><a href="personalloan.html">Personal Loans</a></div>
+                        <div><a href="mortgageservices.html">Mortgage Services</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="service" data-options="credit-options">CREDIT
+                    <div class="options credit-options">
+                        <div><a href="creditmonitoring.html">Credit Monitoring</a></div>
+                        <div><a href="crediteducation.html">Credit Education</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="login.html">Login</a></li>
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const services = document.querySelectorAll('.service');
+
+            services.forEach(service => {
+                service.addEventListener('mouseover', function() {
+                    const options = service.querySelector('.options');
+                    if (options) {
+                        options.style.display = 'flex';
+                    }
+                });
+
+                service.addEventListener('mouseout', function() {
+                    const options = service.querySelector('.options');
+                    if (options) {
+                        options.style.display = 'none';
+                    }
+                });
+
+                service.addEventListener('click', function() {
+                    const options = service.querySelector('.options');
+                    if (options) {
+                        if (options.style.display === 'flex') {
+                            options.style.display = 'none';
+                        } else {
+                            options.style.display = 'flex';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

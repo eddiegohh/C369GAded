@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Domestic and International Transfers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container */
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Header */
+        header {
+            background: #e6f0ef;
+            padding: 20px 0;
+            border-bottom: 5px solid #e6f0ef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+        }
+
+        .hero {
+            background-image: url('images/transfer.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .content-section .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .content-section .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #5d5eb0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1100; /* Ensure it is above other elements */
+        }
+
+        .back-button:hover {
+            background-color: #6e92aa;
+            color: white;
+        }
+
+        .transfer-form {
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .transfer-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .transfer-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .transfer-form label {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .transfer-form input, .transfer-form select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .transfer-form .btn {
+            background: linear-gradient(to right, #5cb85c, #4cae4c);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .transfer-form .btn:hover {
+            background: linear-gradient(to right, #4cae4c, #5cb85c);
+        }
+
+        .active-transfers {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .active-transfers h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .transfer-item {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container1">
+            <h1>Transwease</h1>
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Domestic and International Transfers</h1>
+            <p>Secure and reliable transfers for your domestic and international needs.</p>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <a href="services.html" class="back-button">Back to Services</a>
+
+    <!-- Transfer Form Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="transfer-form">
+                <h2>Transfer Details</h2>
+                <p>Fill in the necessary details and upload the required documents to complete your transfer.</p>
+                <form id="transferForm">
+                    <div class="form-group">
+                        <label for="transferType">Transfer Type</label>
+                        <select id="transferType" name="transferType" class="form-control" required>
+                            <option value="domestic">Domestic Transfer</option>
+                            <option value="international">International Transfer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipientName">Recipient's Name</label>
+                        <input type="text" id="recipientName" name="recipientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipientBank">Recipient's Bank</label>
+                        <input type="text" id="recipientBank" name="recipientBank" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipientAccount">Recipient's Account Number</label>
+                        <input type="text" id="recipientAccount" name="recipientAccount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="currency">Currency</label>
+                        <select id="currency" name="currency" class="form-control" required>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="SGD">SGD</option>
+                            <option value="AUD">AUD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CNY">CNY</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount to Transfer</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="convertedAmount">Converted Amount (SGD)</label>
+                        <input type="number" id="convertedAmount" name="convertedAmount" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="conversionRate">Conversion Rate (1 SGD to your currency)</label>
+                        <input type="text" id="conversionRate" name="conversionRate" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod" name="paymentMethod" class="form-control" required>
+                            <option value="ewallet">E-wallet</option>
+                        </select>
+                    </div>
+                    <div id="ewalletPaymentFields">
+                        <div class="form-group">
+                            <label for="ewalletID">E-wallet ID</label>
+                            <input type="text" id="ewalletID" name="ewalletID" value="Transwease9821" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="authCode">Enter Authentication Code</label>
+                        <input type="text" id="authCode" name="authCode" required>
+                    </div>
+                    <button type="button" class="btn" id="generateCodeButton">Generate Code</button><br><br> 
+                    <button type="submit" class="btn" id="submitButton" disabled>Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Transfers Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="active-transfers">
+                <h2>Active Transfers</h2>
+                <div id="activeTransfersList">
+                    <!-- Active transfers will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="login.html">Login</a></li>
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const exchangeRates = {
+            USD: 1.36,
+            EUR: 1.60,
+            GBP: 1.84,
+            SGD: 1.0,
+            AUD: 1.03,
+            JPY: 0.012,
+            CNY: 0.20
+        };
+
+        document.getElementById('currency').addEventListener('change', updateConvertedAmount);
+        document.getElementById('amount').addEventListener('input', updateConvertedAmount);
+
+        function updateConvertedAmount() {
+            const amount = parseFloat(document.getElementById('amount').value) || 0;
+            const currency = document.getElementById('currency').value;
+            const conversionRate = 1 / exchangeRates[currency];
+            const convertedAmount = amount * exchangeRates[currency];
+            document.getElementById('convertedAmount').value = convertedAmount.toFixed(2);
+            document.getElementById('conversionRate').value = `1 SGD = ${conversionRate.toFixed(4)} ${currency}`;
+        }
+
+        var generateCodeButton = document.getElementById('generateCodeButton');
+        var submitButton = document.getElementById('submitButton');
+        var authCodeInput = document.getElementById('authCode');
+        var generatedCode = '';
+
+        generateCodeButton.addEventListener('click', function() {
+            generatedCode = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit code
+            alert('Your authentication code is: ' + generatedCode);
+            submitButton.disabled = false;
+        });
+
+        submitButton.addEventListener('click', function(event) {
+            if (authCodeInput.value !== generatedCode) {
+                event.preventDefault();
+                alert('Invalid authentication code. Please try again.');
+            } else {
+                event.preventDefault();
+                submitTransferForm();
+            }
+        });
+
+        function submitTransferForm() {
+            const walletID = 'Transwease pay 9821';
+            const walletData = JSON.parse(localStorage.getItem(walletID)) || { balance: 999999.52, transactions: [] };
+            const amount = parseFloat(document.getElementById('convertedAmount').value);
+            
+            if (amount > walletData.balance) {
+                alert('Insufficient balance. Please top up your wallet.');
+                return;
+            }
+            
+            walletData.balance -= amount;
+            walletData.transactions.push({
+                type: 'Transfer',
+                to: document.getElementById('recipientName').value,
+                amount: amount,
+                date: new Date().toLocaleDateString(),
+                transferType: document.getElementById('transferType').value
+            });
+            localStorage.setItem(walletID, JSON.stringify(walletData));
+
+            // Save transfer to active transfers
+            let activeTransfers = JSON.parse(localStorage.getItem('activeTransfers')) || [];
+            const referenceNumber = 'TRANS' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+            const transferDetails = {
+                referenceNumber: referenceNumber,
+                transferType: document.getElementById('transferType').value,
+                recipientName: document.getElementById('recipientName').value,
+                recipientBank: document.getElementById('recipientBank').value,
+                recipientAccount: document.getElementById('recipientAccount').value,
+                currency: document.getElementById('currency').value,
+                amount: amount,
+                date: new Date().toLocaleDateString()
+            };
+            activeTransfers.push(transferDetails);
+            localStorage.setItem('activeTransfers', JSON.stringify(activeTransfers));
+
+            const form = document.getElementById('transferForm');
+            const formData = new FormData(form);
+            const queryString = new URLSearchParams(formData).toString();
+            window.location.href = 'transferprocess.html?' + queryString;
+        }
+
+        function loadActiveTransfers() {
+            const activeTransfers = JSON.parse(localStorage.getItem('activeTransfers')) || [];
+            const activeTransfersList = document.getElementById('activeTransfersList');
+
+            activeTransfers.forEach(transfer => {
+                const transferItem = document.createElement('div');
+                transferItem.classList.add('transfer-item');
+                transferItem.innerHTML = `
+                    <p><strong>Reference Number:</strong> ${transfer.referenceNumber}</p>
+                    <p><strong>Transfer Type:</strong> ${transfer.transferType}</p>
+                    <p><strong>Recipient:</strong> ${transfer.recipientName}</p>
+                    <p><strong>Bank:</strong> ${transfer.recipientBank}</p>
+                    <p><strong>Account Number:</strong> ${transfer.recipientAccount}</p>
+                    <p><strong>Currency:</strong> ${transfer.currency}</p>
+                    <p><strong>Amount:</strong> ${transfer.amount}</p>
+                    <p><strong>Date:</strong> ${transfer.date}</p>
+                `;
+                activeTransfersList.appendChild(transferItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadActiveTransfers);
+    </script>
+
+</body>
+</html>
+

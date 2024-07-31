@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Investment Advisory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container */
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Header */
+        header {
+            background: #e6f0ef;
+            padding: 20px 0;
+            border-bottom: 5px solid #e6f0ef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+        }
+
+        .hero {
+            background-image: url('images/in1.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .content-section .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .content-section .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #5d5eb0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1100; /* Ensure it is above other elements */
+        }
+
+        .back-button:hover {
+            background-color: #6e92aa;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container1">
+            <h1>Transwease</h1>
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Investment Advisory</h1>
+            <p>Expert advice and strategies to help you maximize your investments.</p>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <a href="services.html" class="back-button">Back to Services</a>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Personalized Investment Plans</h2>
+            <p>Our advisors work with you to create personalized investment plans tailored to your financial goals and risk tolerance. We take into account your current financial situation, future goals, and market conditions to design a strategy that helps you achieve your objectives.</p>
+            <div class="img-container">
+                <img src="images/in2.jpg" alt="Personalized Investment Plans"> <!-- Replace with your image path -->
+            </div>
+
+            <h2>Market Analysis</h2>
+            <p>Stay informed with the latest market analysis from our experts. We provide detailed reports and insights into market trends, economic indicators, and investment opportunities. Our analysis helps you make informed decisions and stay ahead of market changes.</p>
+            <div class="img-container">
+                <img src="images/in3.jpg" alt="Market Analysis"> <!-- Replace with your image path -->
+            </div>
+
+            <h2>Risk Management</h2>
+            <p>Our risk management strategies help protect your investments from market volatility. We use advanced techniques to analyze and mitigate risks, ensuring that your portfolio is well-balanced and resilient in changing market conditions.</p>
+            <div class="img-container">
+                <img src="images/in4.jpg" alt="Risk Management"> <!-- Replace with your image path -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="login.html">Login</a></li>
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

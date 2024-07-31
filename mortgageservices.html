@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Mortgage Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container */
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Header */
+        header {
+            background: #e6f0ef;
+            padding: 20px 0;
+            border-bottom: 5px solid #e6f0ef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+        }
+
+        .hero {
+            background-image: url('images/mortgage.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .content-section .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .content-section .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #5d5eb0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1100; /* Ensure it is above other elements */
+        }
+
+        .back-button:hover {
+            background-color: #6e92aa;
+            color: white;
+        }
+
+        .mortgage-form {
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .mortgage-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .mortgage-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .mortgage-form label {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .mortgage-form input, .mortgage-form select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .mortgage-form .btn {
+            background: linear-gradient(to right, #5cb85c, #4cae4c);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .mortgage-form .btn:hover {
+            background: linear-gradient(to right, #4cae4c, #5cb85c);
+        }
+
+        .mortgage-details {
+            background-color: #f8f9fa;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            display: none;
+        }
+
+        .mortgage-details h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .mortgage-details p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container1">
+            <h1>Transwease</h1>
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Mortgage Services</h1>
+            <p>Professional mortgage services tailored to your needs.</p>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <a href="services.html" class="back-button">Back to Services</a>
+
+    <!-- Mortgage Form Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="mortgage-form">
+                <h2>Apply for a Mortgage</h2>
+                <p>Fill in the necessary details to apply for a mortgage.</p>
+                <form id="mortgageForm">
+                    <div class="form-group">
+                        <label for="propertyValue">Property Value</label>
+                        <input type="number" id="propertyValue" name="propertyValue" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="downPayment">Down Payment</label>
+                        <input type="number" id="downPayment" name="downPayment" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loanAmount">Loan Amount</label>
+                        <input type="number" id="loanAmount" name="loanAmount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loanTerm">Loan Term (years)</label>
+                        <input type="number" id="loanTerm" name="loanTerm" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="annualIncome">Annual Income</label>
+                        <input type="number" id="annualIncome" name="annualIncome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employmentStatus">Employment Status</label>
+                        <select id="employmentStatus" name="employmentStatus" class="form-control" required>
+                            <option value="employed">Employed</option>
+                            <option value="selfEmployed">Self-Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="creditScore">Credit Score</label>
+                        <input type="number" id="creditScore" name="creditScore" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="text" id="contactNumber" name="contactNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Mortgage Details Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="mortgage-details" id="mortgageDetails">
+                <h2>Active Mortgage Details</h2>
+                <p><strong>Property Value:</strong> <span id="displayPropertyValue"></span></p>
+                <p><strong>Down Payment:</strong> <span id="displayDownPayment"></span></p>
+                <p><strong>Loan Amount:</strong> <span id="displayLoanAmount"></span></p>
+                <p><strong>Loan Term:</strong> <span id="displayLoanTerm"></span></p>
+                <p><strong>Annual Income:</strong> <span id="displayAnnualIncome"></span></p>
+                <p><strong>Employment Status:</strong> <span id="displayEmploymentStatus"></span></p>
+                <p><strong>Credit Score:</strong> <span id="displayCreditScore"></span></p>
+                <p><strong>Contact Number:</strong> <span id="displayContactNumber"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="login.html">Login</a></li>
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mortgageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const propertyValue = document.getElementById('propertyValue').value;
+            const downPayment = document.getElementById('downPayment').value;
+            const loanAmount = document.getElementById('loanAmount').value;
+            const loanTerm = document.getElementById('loanTerm').value;
+            const annualIncome = document.getElementById('annualIncome').value;
+            const employmentStatus = document.getElementById('employmentStatus').value;
+            const creditScore = document.getElementById('creditScore').value;
+            const contactNumber = document.getElementById('contactNumber').value;
+            const email = document.getElementById('email').value;
+
+            const mortgageDetails = {
+                propertyValue,
+                downPayment,
+                loanAmount,
+                loanTerm,
+                annualIncome,
+                employmentStatus,
+                creditScore,
+                contactNumber,
+                email
+            };
+
+            localStorage.setItem('mortgageDetails', JSON.stringify(mortgageDetails));
+
+            displayMortgageDetails();
+        });
+
+        function displayMortgageDetails() {
+            const mortgageDetails = JSON.parse(localStorage.getItem('mortgageDetails'));
+
+            if (mortgageDetails) {
+                document.getElementById('displayPropertyValue').textContent = mortgageDetails.propertyValue;
+                document.getElementById('displayDownPayment').textContent = mortgageDetails.downPayment;
+                document.getElementById('displayLoanAmount').textContent = mortgageDetails.loanAmount;
+                document.getElementById('displayLoanTerm').textContent = mortgageDetails.loanTerm;
+                document.getElementById('displayAnnualIncome').textContent = mortgageDetails.annualIncome;
+                document.getElementById('displayEmploymentStatus').textContent = mortgageDetails.employmentStatus;
+                document.getElementById('displayCreditScore').textContent = mortgageDetails.creditScore;
+                document.getElementById('displayContactNumber').textContent = mortgageDetails.contactNumber;
+                document.getElementById('displayEmail').textContent = mortgageDetails.email;
+
+                document.getElementById('mortgageDetails').style.display = 'block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            displayMortgageDetails();
+        });
+    </script>
+
+</body>
+</html>
+
+

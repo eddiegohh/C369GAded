@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Account</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        /* Header */
+        header {
+            background: #e6f0ef;
+            padding: 20px 0;
+            border-bottom: 5px solid #e6f0ef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 100px; /* Adjusted padding to avoid content overlap with fixed header */
+        }
+        .account-section {
+            padding: 40px 0;
+        }
+
+        .account-info, .transaction-history, .settings, .active-details {
+            margin-bottom: 40px;
+        }
+
+        .transaction-history table, .active-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .transaction-history th, .transaction-history td, .active-details th, .active-details td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .account-details {
+            font-size: 24px;
+        }
+
+        .btn-edit, .btn-save {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <h1>Transwease</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link active">Account</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="account-section">
+        <div class="container">
+            <h2 class="mb-4 text-center">Account Details</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="account-info">
+                        <h3 class="text-center">Personal Information</h3>
+                        <p><strong>Name:</strong> <span id="accountName">John Doe</span></p>
+                        <p><strong>Email:</strong> <span id="accountEmail">johndoe@example.com</span></p>
+                        <p><strong>Phone:</strong> <span id="accountPhone">+65 1234 5678</span></p>
+                        <button class="btn btn-primary btn-edit">Edit</button>
+                        <button class="btn btn-success btn-save" style="display: none;">Save</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="transaction-history">
+                        <h3 class="text-center">Transaction History</h3>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionTable">
+                                <!-- Transactions will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="settings">
+                        <h3 class="text-center">Settings</h3>
+                        <p><a href="changepassword.html">Change Password</a></p>
+                        <p><a href="updatesettings.html">Update Settings</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="active-details">
+                        <h3 class="text-center">Active Transfers</h3>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Reference Number</th>
+                                    <th>Type</th>
+                                    <th>Recipient</th>
+                                    <th>Bank</th>
+                                    <th>Account Number</th>
+                                    <th>Currency</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="activeTransfersTable">
+                                <!-- Active transfers will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="active-details">
+                        <h3 class="text-center">Active Claim Processing</h3>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Claim Type</th>
+                                    <th>Policy Number</th>
+                                    <th>Claim Amount</th>
+                                    <th>Description</th>
+                                    <th>Claim Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="claimProcessingDetails">
+                                <!-- Active claim processing details will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="active-details">
+                        <h3 class="text-center">Active Policy Management</h3>
+                        <div id="policyManagementDetails">
+                            <!-- Active policy management details will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="active-details">
+                        <h3 class="text-center">Active Personal Loans</h3>
+                        <div id="personalLoansDetails">
+                            <!-- Active personal loans details will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="active-details">
+                        <h3 class="text-center">Active Mortgage Services</h3>
+                        <div id="mortgageServicesDetails">
+                            <!-- Active mortgage services details will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="login.html">Login</a></li>
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (user) {
+                document.getElementById('accountName').textContent = user.username;
+                document.getElementById('accountEmail').textContent = user.email;
+                document.getElementById('accountPhone').textContent = user.phone;
+            }
+
+            loadTransactions();
+            loadActiveTransfers();
+            loadActiveClaims();
+            loadActiveDetails('policies', 'policyManagementDetails');
+            loadActiveDetails('activeLoan', 'personalLoansDetails');
+            loadActiveDetails('mortgageDetails', 'mortgageServicesDetails');
+
+            document.querySelector('.btn-edit').addEventListener('click', function() {
+                document.querySelectorAll('.account-info span').forEach(span => {
+                    const input = document.createElement('input');
+                    input.value = span.textContent;
+                    input.classList.add('form-control', 'mb-2');
+                    span.replaceWith(input);
+                });
+                this.style.display = 'none';
+                document.querySelector('.btn-save').style.display = 'block';
+            });
+
+            document.querySelector('.btn-save').addEventListener('click', function() {
+                const inputs = document.querySelectorAll('.account-info input');
+                const user = {
+                    username: inputs[0].value,
+                    email: inputs[1].value,
+                    phone: inputs[2].value
+                };
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
+                inputs.forEach(input => {
+                    const span = document.createElement('span');
+                    span.textContent = input.value;
+                    input.replaceWith(span);
+                });
+                this.style.display = 'none';
+                document.querySelector('.btn-edit').style.display = 'block';
+            });
+        });
+
+        function loadTransactions() {
+            const walletID = 'Transwease pay 9821';
+            const walletData = JSON.parse(localStorage.getItem(walletID)) || { transactions: [] };
+            const transactionTable = document.getElementById('transactionTable');
+
+            walletData.transactions.forEach(transaction => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transaction.date}</td>
+                    <td>${transaction.type === 'Transfer' ? (transaction.transferType === 'domestic' ? 'Domestic Transfer' : 'International Transfer') : transaction.type}</td>
+                    <td>S$${transaction.amount.toFixed(2)}</td>
+                `;
+                transactionTable.appendChild(row);
+            });
+        }
+
+        function loadActiveTransfers() {
+            const activeTransfers = JSON.parse(localStorage.getItem('activeTransfers')) || [];
+            const activeTransfersTable = document.getElementById('activeTransfersTable');
+
+            activeTransfers.forEach(transfer => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transfer.referenceNumber}</td>
+                    <td>${transfer.transferType === 'domestic' ? 'Domestic Transfer' : 'International Transfer'}</td>
+                    <td>${transfer.recipientName}</td>
+                    <td>${transfer.recipientBank}</td>
+                    <td>${transfer.recipientAccount}</td>
+                    <td>${transfer.currency}</td>
+                    <td>${transfer.amount}</td>
+                    <td>${transfer.date}</td>
+                `;
+                activeTransfersTable.appendChild(row);
+            });
+        }
+
+        function loadActiveClaims() {
+            const activeClaims = JSON.parse(localStorage.getItem('claims')) || [];
+            const claimProcessingTable = document.getElementById('claimProcessingDetails');
+
+            activeClaims.forEach(claim => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${claim.claimType}</td>
+                    <td>${claim.policyNumber}</td>
+                    <td>${claim.claimAmount}</td>
+                    <td>${claim.description}</td>
+                    <td>${claim.claimDate}</td>
+                `;
+                claimProcessingTable.appendChild(row);
+            });
+        }
+
+        function loadActiveDetails(localStorageKey, containerId) {
+            const activeDetails = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+            const container = document.getElementById(containerId);
+
+            activeDetails.forEach(claim => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td> ${detail.id}</td>
+                    <td> ${detail.type}</td>
+                    <td> ${detail.details}</td>
+                    <td> ${detail.date}</td>
+                `;
+                container.appendChild(detailDiv);
+            });
+        }
+    </script>
+</body>
+</html>

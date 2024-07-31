@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transwease - Pay Bills</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container */
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Header */
+        header {
+            background: #e6f0ef;
+            padding: 20px 0;
+            border-bottom: 5px solid #e6f0ef;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .content-section .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .content-section .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Payment Form */
+        .payment-form {
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .payment-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .payment-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .payment-form label {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .payment-form input, .payment-form select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .payment-form .btn {
+            background: linear-gradient(to right, #5cb85c, #4cae4c);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .payment-form .btn:hover {
+            background: linear-gradient(to right, #4cae4c, #5cb85c);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1100; /* Ensure it is above other elements */
+        }
+
+        .back-button:hover {
+            background-color: #4cae4c;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+        }
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .footer-section p,
+        .footer-section ul,
+        .footer-section ul li {
+            font-size: 14px;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container1">
+            <h1>Transwease</h1>
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Pay Your Bills Securely</h1>
+            <p>Experience a seamless and secure way to pay your bills online with Transwease.</p>
+        </div>
+    </section>
+
+    <!-- Payment Form Section -->
+    <section class="content-section">
+        <div class="container">
+            <a href="services.html" class="back-button">Back to Services</a>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="payment-form">
+                        <h2>Bill Payment Information</h2>
+                        <form id="paymentForm" method="post">
+                            <div class="form-group">
+                                <label for="billerName">Biller Name</label>
+                                <input type="text" id="billerName" name="billerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" id="accountNumber" name="accountNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount to Pay</label>
+                                <input type="number" id="amount" name="amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="paymentMethod">Payment Method</label>
+                                <select id="paymentMethod" name="paymentMethod" class="form-control" required>
+                                    <option value="card">Credit/Debit Card</option>
+                                    <option value="ewallet">E-wallet</option>
+                                </select>
+                            </div>
+                            <div id="cardPaymentFields">
+                                <div class="form-group">
+                                    <label for="cardName">Cardholder Name</label>
+                                    <input type="text" id="cardName" name="cardName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" name="cardNumber">
+                                </div>
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv">
+                                </div>
+                            </div>
+                            <div id="ewalletPaymentFields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="ewalletID">E-wallet ID</label>
+                                    <input type="text" id="ewalletID" name="ewalletID" value="Transwease9821" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group" id="authCodeSection" style="display: none;">
+                                <label for="authCode">Authentication Code</label>
+                                <input type="text" id="authCode" name="authCode" required>
+                                <button type="button" id="generateCodeButton" class="btn btn-secondary mt-2">Generate Code</button>
+                            </div>
+                            <button type="button" class="btn" id="payNowButton">Pay Now</button>
+                            <button type="submit" class="btn" id="submitPaymentButton" style="display: none;">Submit Payment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: transwease@gmail.com</p>
+                    <p>Phone: +65 999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Transwease. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('paymentMethod').addEventListener('change', function() {
+            var cardFields = document.getElementById('cardPaymentFields');
+            var ewalletFields = document.getElementById('ewalletPaymentFields');
+            var authCodeSection = document.getElementById('authCodeSection');
+            var payNowButton = document.getElementById('payNowButton');
+            var submitPaymentButton = document.getElementById('submitPaymentButton');
+
+            if (this.value === 'card') {
+                cardFields.style.display = 'block';
+                ewalletFields.style.display = 'none';
+            } else {
+                cardFields.style.display = 'none';
+                ewalletFields.style.display = 'block';
+            }
+
+            authCodeSection.style.display = 'none';
+            payNowButton.disabled = false;
+            submitPaymentButton.style.display = 'none';
+        });
+
+        document.getElementById('payNowButton').addEventListener('click', function() {
+            var generatedCode = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit code
+            alert('Your authentication code is: ' + generatedCode);
+
+            var authCodeSection = document.getElementById('authCodeSection');
+            var authCodeInput = document.getElementById('authCode');
+            var payNowButton = document.getElementById('payNowButton');
+            var submitPaymentButton = document.getElementById('submitPaymentButton');
+
+            authCodeSection.style.display = 'block';
+            payNowButton.style.display = 'none';
+            submitPaymentButton.style.display = 'block';
+
+            authCodeInput.addEventListener('input', function() {
+                var enteredCode = authCodeInput.value;
+
+                if (enteredCode === generatedCode) {
+                    submitPaymentButton.disabled = false;
+                } else {
+                    submitPaymentButton.disabled = true;
+                }
+            });
+        });
+
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+
+            // Assuming the form validation is successful, proceed to the paymentprocess.html page
+            const paymentMethod = document.getElementById('paymentMethod').value;
+            const amount = parseFloat(document.getElementById('amount').value);
+            
+            if (paymentMethod === 'ewallet') {
+                // Update the wallet balance
+                const walletID = 'Transwease pay 9821';
+                const walletData = JSON.parse(localStorage.getItem(walletID)) || { balance: 999999.52, transactions: [] };
+                walletData.balance -= amount;
+                walletData.transactions.push({
+                    type: 'Payment',
+                    to: document.getElementById('billerName').value,
+                    amount: amount
+                });
+                localStorage.setItem(walletID, JSON.stringify(walletData));
+            }
+
+            window.location.href = 'paymentprocess.html?status=success';
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .wallet-container {
+            background-color: #dff0d8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .wallet-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            background-color: #d3d3d3;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .tab-button.active {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+
+        .wallet-info {
+            margin-bottom: 20px;
+        }
+
+        .wallet-info h3 {
+            margin: 0;
+            color: #000;
+        }
+
+        .wallet-info p {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .top-up-button {
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .wallet-settings {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .wallet-settings label {
+            display: flex;
+            align-items: center;
+        }
+
+        .wallet-settings input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .transactions-container {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .transaction {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .transaction.receive {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+
+        .transaction.payment {
+            background-color: #f0ad4e;
+            color: #fff;
+        }
+
+        .transaction.transfer {
+            background-color: #0275d8;
+            color: #fff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+            position: relative;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .modal-content button {
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal-content button:disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #5bc0de;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Transwease</h1>
+            <nav>
+                <ul>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="ewallet.html">E-wallet</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wallet-container">
+        <h2>Digital Wallets</h2>
+        <div class="wallet-tabs" id="walletTabs">
+            <button class="tab-button active" data-card="Transwease pay 9821">Transwease pay 9821</button>
+        </div>
+        <div class="wallet-info">
+            <h3 id="selectedWalletName">Transwease pay Wallet</h3>
+            <p id="balance">Balance amount: $ 999999.52</p>
+            <button class="top-up-button" id="topUpButton">Top Up</button>
+        </div>
+        <div class="wallet-settings">
+            <label>
+                <input type="checkbox">
+                Auto Top-Up
+            </label>
+            <button id="spendBalanceButton">Spend & Balance Limits</button>
+        </div>
+        <a href="services.html" class="back-button">Back</a>
+    </div>
+
+    <div class="transactions-container">
+        <h2>Wallet Transactions</h2>
+        <!-- Transactions will be loaded here -->
+    </div>
+
+    <!-- Modal for Top-Up -->
+    <div class="modal" id="topUpModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalCloseButton">&times;</button>
+            <h3>Top Up Amount</h3>
+            <input type="number" id="topUpAmount" placeholder="Enter amount" min="1">
+            <h3>Enter Authentication Code</h3>
+            <input type="text" id="authCode" placeholder="Enter code">
+            <button id="generateCodeButton">Generate Code</button><br><br>
+            <button id="confirmTopUp" disabled>Confirm</button>
+        </div>
+    </div>
+
+    <!-- Modal for Spend & Balance Limits -->
+    <div class="modal" id="spendBalanceModal">
+        <div class="modal-content">
+            <button class="modal-close" id="spendBalanceModalCloseButton">&times;</button>
+            <h3>Set Spend & Balance Limits</h3>
+            <input type="number" id="dailySpendLimit" placeholder="Daily Spend Limit" min="0">
+            <input type="number" id="monthlySpendLimit" placeholder="Monthly Spend Limit" min="0">
+            <input type="number" id="balanceLimit" placeholder="Balance Limit" min="0">
+            <button id="confirmSpendBalance" disabled>Set Limits</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedCard = 'Transwease pay 9821';
+            document.getElementById('selectedWalletName').textContent = `${selectedCard} Wallet`;
+            loadWalletData(selectedCard);
+
+            function loadWalletData(walletID) {
+                const walletData = JSON.parse(localStorage.getItem(walletID)) || { balance: 999999.52, transactions: [] };
+                document.getElementById('balance').textContent = `Balance amount: $ ${walletData.balance.toFixed(2)}`;
+
+                const transactionsContainer = document.querySelector('.transactions-container');
+                transactionsContainer.innerHTML = '<h2>Wallet Transactions</h2>'; // Reset transactions container
+                walletData.transactions.forEach(transaction => {
+                    const transactionDiv = document.createElement('div');
+                    transactionDiv.classList.add('transaction', transaction.type.toLowerCase());
+                    transactionDiv.innerHTML = `
+                        <p>${transaction.type === 'Payment' ? 'To' : 'From'} ${transaction.to}</p>
+                        <p>Amount: S$${transaction.amount.toFixed(2)}</p>
+                        <p>${transaction.date}</p>
+                        ${transaction.type === 'Transfer' ? `<p>${transaction.transferType} Transfer</p>` : ''}
+                    `;
+                    transactionsContainer.appendChild(transactionDiv);
+                });
+            }
+
+            const topUpButton = document.getElementById('topUpButton');
+            const topUpModal = document.getElementById('topUpModal');
+            const modalCloseButton = document.getElementById('modalCloseButton');
+            const generateCodeButton = document.getElementById('generateCodeButton');
+            const confirmTopUpButton = document.getElementById('confirmTopUp');
+            const topUpAmountInput = document.getElementById('topUpAmount');
+            const authCodeInput = document.getElementById('authCode');
+            let generatedCode = '';
+
+            topUpButton.addEventListener('click', () => {
+                topUpModal.style.display = 'flex';
+            });
+
+            modalCloseButton.addEventListener('click', () => {
+                topUpModal.style.display = 'none';
+            });
+
+            generateCodeButton.addEventListener('click', () => {
+                generatedCode = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit code
+                alert(`Your authentication code is: ${generatedCode}`);
+            });
+
+            authCodeInput.addEventListener('input', () => {
+                if (authCodeInput.value === generatedCode) {
+                    confirmTopUpButton.disabled = false;
+                } else {
+                    confirmTopUpButton.disabled = true;
+                }
+            });
+
+            confirmTopUpButton.addEventListener('click', () => {
+                const topUpAmount = parseFloat(topUpAmountInput.value);
+                const walletID = 'Transwease pay 9821';
+                const walletData = JSON.parse(localStorage.getItem(walletID)) || { balance: 999999.52, transactions: [] };
+                walletData.balance += topUpAmount;
+                walletData.transactions.push({
+                    type: 'Receive',
+                    to: 'Top-Up',
+                    amount: topUpAmount,
+                    date: new Date().toLocaleDateString()
+                });
+                localStorage.setItem(walletID, JSON.stringify(walletData));
+
+                loadWalletData(walletID);
+
+                topUpModal.style.display = 'none';
+                topUpAmountInput.value = '';
+                authCodeInput.value = '';
+                confirmTopUpButton.disabled = true;
+                generatedCode = ''; // Reset the code
+            });
+
+            const spendBalanceButton = document.getElementById('spendBalanceButton');
+            const spendBalanceModal = document.getElementById('spendBalanceModal');
+            const spendBalanceModalCloseButton = document.getElementById('spendBalanceModalCloseButton');
+            const confirmSpendBalanceButton = document.getElementById('confirmSpendBalance');
+            const dailySpendLimitInput = document.getElementById('dailySpendLimit');
+            const monthlySpendLimitInput = document.getElementById('monthlySpendLimit');
+            const balanceLimitInput = document.getElementById('balanceLimit');
+
+            spendBalanceButton.addEventListener('click', () => {
+                spendBalanceModal.style.display = 'flex';
+            });
+
+            spendBalanceModalCloseButton.addEventListener('click', () => {
+                spendBalanceModal.style.display = 'none';
+            });
+
+            function checkSpendBalanceFields() {
+                if (dailySpendLimitInput.value && monthlySpendLimitInput.value && balanceLimitInput.value) {
+                    confirmSpendBalanceButton.disabled = false;
+                } else {
+                    confirmSpendBalanceButton.disabled = true;
+                }
+            }
+
+            dailySpendLimitInput.addEventListener('input', checkSpendBalanceFields);
+            monthlySpendLimitInput.addEventListener('input', checkSpendBalanceFields);
+            balanceLimitInput.addEventListener('input', checkSpendBalanceFields);
+
+            confirmSpendBalanceButton.addEventListener('click', () => {
+                const dailySpendLimit = parseFloat(dailySpendLimitInput.value);
+                const monthlySpendLimit = parseFloat(monthlySpendLimitInput.value);
+                const balanceLimit = parseFloat(balanceLimitInput.value);
+
+                alert(`Limits set:\nDaily Spend Limit: $${dailySpendLimit}\nMonthly Spend Limit: $${monthlySpendLimit}\nBalance Limit: $${balanceLimit}`);
+
+                spendBalanceModal.style.display = 'none';
+                dailySpendLimitInput.value = '';
+                monthlySpendLimitInput.value = '';
+                balanceLimitInput.value = '';
+                confirmSpendBalanceButton.disabled = true;
+            });
+
+            loadWalletData(selectedCard);
+        });
+    </script>
+</body>
+</html>
