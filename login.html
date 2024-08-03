@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Login</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS stylesheet -->
     <style>
         .login-section {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh;
+            height: 80vh; /* Full viewport height minus header */
         }
 
         .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* White background color */
+            padding: 20px; /* Padding inside the form container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Space between form groups */
         }
 
         .form-group label {
-            display: block;
-            margin-bottom: 5px;
+            display: block; /* Labels displayed as block elements */
+            margin-bottom: 5px; /* Space below labels */
         }
 
         .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 100%; /* Full width input fields */
+            padding: 10px; /* Padding inside input fields */
+            border: 1px solid #ccc; /* Light grey border */
+            border-radius: 5px; /* Rounded corners */
         }
 
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #5cb85c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
+            display: inline-block; /* Inline block display for buttons */
+            padding: 10px 20px; /* Padding inside buttons */
+            background-color: #5cb85c; /* Green background color */
+            color: #fff; /* White text color */
+            text-decoration: none; /* No underline for buttons */
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .back-button {
+            position: fixed; /* Fixed position */
+            top: 90px; /* 90px from the top */
+            left: 20px; /* 20px from the left */
+            padding: 10px 20px; /* Padding inside the button */
+            background-color: #5d5eb0; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* No underline for the button */
+            font-size: 16px; /* Font size for the button */
+            z-index: 1100; /* Ensure it is above other elements */
+        }
+
+        .back-button:hover {
+            background-color: #6e92aa; /* Background color on hover */
+            color: white; /* Text color on hover */
         }
     </style>
 </head>
@@ -52,32 +70,32 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul>
-                    <li><a href="login.html" class="active">Login</a></li>
-                    <li><a href="signup.html">Sign up</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="login.html" class="active">Login</a></li> <!-- Link to login page -->
+                    <li><a href="signup.html">Sign up</a></li> <!-- Link to sign-up page -->
+                    <li><a href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
     </header>
-
+    <a href="index.html" class="back-button">Back to Home</a> <!-- Back to home button -->
     <!-- Login Section -->
     <section class="login-section">
         <div class="container">
-            <h2>Login</h2>
+            <h2>Login</h2> <!-- Login section title -->
             <div class="form-container">
-                <form id="loginForm" onsubmit="return validateForm()">
+                <form id="loginForm" onsubmit="return validateForm()"> <!-- Login form -->
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label> <!-- Label for email input -->
+                        <input type="email" id="email" name="email" required> <!-- Email input field -->
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="password">Password</label> <!-- Label for password input -->
+                        <input type="password" id="password" name="password" required> <!-- Password input field -->
                     </div>
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn">Login</button> <!-- Login button -->
                 </form>
             </div>
         </div>
@@ -87,57 +105,50 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                <h3>About Us</h3> <!-- About Us section title -->
+                <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- About Us section description -->
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Quick Links</h3> <!-- Quick Links section title -->
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+                    <li><a href="login.html">Login</a></li> <!-- Link to login page -->
+                    <li><a href="signup.html">Sign Up</a></li> <!-- Link to sign-up page -->
+                    <li><a href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: transwease@gmail.com</p>
-                <p>Phone: +65 999</p>
+                <h3>Contact Us</h3> <!-- Contact Us section title -->
+                <p>Email: transwease@gmail.com</p> <!-- Email address -->
+                <p>Phone: +65 999</p> <!-- Phone number -->
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 Transwease. All rights reserved.
+            &copy; 2024 Transwease. All rights reserved. <!-- Footer copyright text -->
         </div>
     </footer>
     <script>
         function validateForm() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value; // Get the email value
+            const password = document.getElementById('password').value; // Get the password value
 
             // Basic client-side validation for email and password
             if (!email || !password) {
-                alert('Please fill out all fields.');
-                return false;
+                alert('Please fill out all fields.'); // Alert if any field is empty
+                return false; // Prevent form submission
             }
 
-            const storedUser = JSON.parse(localStorage.getItem('user'));
+            const storedUser = JSON.parse(localStorage.getItem('user')); // Retrieve stored user data from localStorage
             if (!storedUser || storedUser.email !== email || storedUser.password !== password) {
-                alert('Invalid email or password.');
-                return false;
+                alert('Invalid email or password.'); // Alert if email or password is incorrect
+                return false; // Prevent form submission
             }
 
-            alert('Login successful!');
-            localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
-            window.location.href = 'services.html';
-            return false;
+            alert('Login successful!'); // Alert if login is successful
+            localStorage.setItem('loggedInUser', JSON.stringify(storedUser)); // Store logged in user data in localStorage
+            window.location.href = 'services.html'; // Redirect to services page
+            return false; // Prevent form submission
         }
     </script>
 </body>
 </html>
-
-
-
-
-
-
-

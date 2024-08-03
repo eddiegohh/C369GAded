@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Account</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Account</title> <!-- Title of the webpage -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Link to Bootstrap CSS for styling -->
     <style>
         .container1 {
             width: 90%;
@@ -95,35 +95,50 @@
         .btn-edit, .btn-save {
             margin-top: 10px;
         }
+        .back-button {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #5d5eb0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1100; /* Ensure it is above other elements */
+        }        
     </style>
 </head>
 <body>
     <header>
         <div class="container1">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
-                    <li class="nav-item"><a href="account.html" class="nav-link active">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> <!-- Link to services page -->
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li class="nav-item"><a href="account.html" class="nav-link active">Account</a></li> <!-- Link to account page, marked as active -->
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
     </header>
 
+    <a href="services.html" class="back-button">Back</a> <!-- Back button -->
+
     <section class="account-section">
         <div class="container">
-            <h2 class="mb-4 text-center">Account Details</h2>
+            <h2 class="mb-4 text-center">Account Details</h2> <!-- Section title -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="account-info">
                         <h3 class="text-center">Personal Information</h3>
-                        <p><strong>Name:</strong> <span id="accountName">John Doe</span></p>
-                        <p><strong>Email:</strong> <span id="accountEmail">johndoe@example.com</span></p>
-                        <p><strong>Phone:</strong> <span id="accountPhone">+65 1234 5678</span></p>
-                        <button class="btn btn-primary btn-edit">Edit</button>
-                        <button class="btn btn-success btn-save" style="display: none;">Save</button>
+                        <p><strong>Name:</strong> <span id="accountName">John Doe</span></p> <!-- Placeholder for user's name -->
+                        <p><strong>Email:</strong> <span id="accountEmail">johndoe@example.com</span></p> <!-- Placeholder for user's email -->
+                        <p><strong>Phone:</strong> <span id="accountPhone">+65 1234 5678</span></p> <!-- Placeholder for user's phone -->
+                        <button class="btn btn-primary btn-edit">Edit</button> <!-- Edit button -->
+                        <button class="btn btn-success btn-save" style="display: none;">Save</button> <!-- Save button, initially hidden -->
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -146,8 +161,8 @@
                 <div class="col-md-4">
                     <div class="settings">
                         <h3 class="text-center">Settings</h3>
-                        <p><a href="changepassword.html">Change Password</a></p>
-                        <p><a href="updatesettings.html">Update Settings</a></p>
+                        <p><a href="changepassword.html">Change Password</a></p> <!-- Link to change password page -->
+                        <p><a href="updatesettings.html">Update Settings</a></p> <!-- Link to update settings page -->
                     </div>
                 </div>
             </div>
@@ -196,25 +211,67 @@
                 <div class="col-12">
                     <div class="active-details">
                         <h3 class="text-center">Active Policy Management</h3>
-                        <div id="policyManagementDetails">
-                            <!-- Active policy management details will be loaded here -->
-                        </div>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Policy Type</th>
+                                    <th>Policy Number</th>
+                                    <th>Policy Holder</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="policyManagementDetails">
+                                <!-- Active policy management details will be loaded here -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="active-details">
                         <h3 class="text-center">Active Personal Loans</h3>
-                        <div id="personalLoansDetails">
-                            <!-- Active personal loans details will be loaded here -->
-                        </div>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Loan Amount</th>
+                                    <th>Loan Term</th>
+                                    <th>Annual Income</th>
+                                    <th>Employment Status</th>
+                                    <th>Credit Score</th>
+                                    <th>Purpose of Loan</th>
+                                    <th>Contact Number</th>
+                                    <th>Email</th>
+                                    <th>Application Date</th>
+                                    <th>Reference Number</th>
+                                </tr>
+                            </thead>
+                            <tbody id="personalLoansDetails">
+                                <!-- Active personal loans details will be loaded here -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="active-details">
                         <h3 class="text-center">Active Mortgage Services</h3>
-                        <div id="mortgageServicesDetails">
-                            <!-- Active mortgage services details will be loaded here -->
-                        </div>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Property Value</th>
+                                    <th>Down Payment</th>
+                                    <th>Loan Amount</th>
+                                    <th>Loan Term</th>
+                                    <th>Annual Income</th>
+                                    <th>Employment Status</th>
+                                    <th>Credit Score</th>
+                                    <th>Contact Number</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mortgageServicesDetails">
+                                <!-- Active mortgage services details will be loaded here -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -225,77 +282,77 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>About Us</h3>
-                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                    <h3>About Us</h3> <!-- Footer section title -->
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- Company description -->
                 </div>
                 <div class="col-md-4">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Footer section title -->
                     <ul class="list-unstyled">
-                        <li><a class="text-white" href="index.html">Home</a></li>
-                        <li><a class="text-white" href="login.html">Login</a></li>
-                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
-                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                        <li><a class="text-white" href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a class="text-white" href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li> <!-- Link to sign up page -->
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Footer section title -->
+                    <p>Email: transwease@gmail.com</p> <!-- Company email -->
+                    <p>Phone: +65 999</p> <!-- Company phone number -->
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright text -->
             </div>
         </div>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            const user = JSON.parse(localStorage.getItem('loggedInUser')); // Get logged-in user data from localStorage
             if (user) {
-                document.getElementById('accountName').textContent = user.username;
-                document.getElementById('accountEmail').textContent = user.email;
-                document.getElementById('accountPhone').textContent = user.phone;
+                document.getElementById('accountName').textContent = user.username; // Display user's name
+                document.getElementById('accountEmail').textContent = user.email; // Display user's email
+                document.getElementById('accountPhone').textContent = user.phone; // Display user's phone number
             }
 
-            loadTransactions();
-            loadActiveTransfers();
-            loadActiveClaims();
-            loadActiveDetails('policies', 'policyManagementDetails');
-            loadActiveDetails('activeLoan', 'personalLoansDetails');
-            loadActiveDetails('mortgageDetails', 'mortgageServicesDetails');
+            loadTransactions(); // Load transaction history
+            loadActiveTransfers(); // Load active transfers
+            loadActiveClaims(); // Load active claims
+            loadActivePolicies(); // Load active policies
+            loadActivePersonalLoans(); // Load active personal loans
+            loadActiveMortgageServices(); // Load active mortgage services
 
             document.querySelector('.btn-edit').addEventListener('click', function() {
                 document.querySelectorAll('.account-info span').forEach(span => {
-                    const input = document.createElement('input');
-                    input.value = span.textContent;
-                    input.classList.add('form-control', 'mb-2');
-                    span.replaceWith(input);
+                    const input = document.createElement('input'); // Create input elements
+                    input.value = span.textContent; // Set input value to the current text content
+                    input.classList.add('form-control', 'mb-2'); // Add classes to input element
+                    span.replaceWith(input); // Replace span with input
                 });
-                this.style.display = 'none';
-                document.querySelector('.btn-save').style.display = 'block';
+                this.style.display = 'none'; // Hide edit button
+                document.querySelector('.btn-save').style.display = 'block'; // Show save button
             });
 
             document.querySelector('.btn-save').addEventListener('click', function() {
-                const inputs = document.querySelectorAll('.account-info input');
+                const inputs = document.querySelectorAll('.account-info input'); // Get all input elements
                 const user = {
-                    username: inputs[0].value,
-                    email: inputs[1].value,
-                    phone: inputs[2].value
+                    username: inputs[0].value, // Get value from name input
+                    email: inputs[1].value, // Get value from email input
+                    phone: inputs[2].value // Get value from phone input
                 };
-                localStorage.setItem('loggedInUser', JSON.stringify(user));
+                localStorage.setItem('loggedInUser', JSON.stringify(user)); // Save updated user data to localStorage
                 inputs.forEach(input => {
-                    const span = document.createElement('span');
-                    span.textContent = input.value;
-                    input.replaceWith(span);
+                    const span = document.createElement('span'); // Create span elements
+                    span.textContent = input.value; // Set span text content to input value
+                    input.replaceWith(span); // Replace input with span
                 });
-                this.style.display = 'none';
-                document.querySelector('.btn-edit').style.display = 'block';
+                this.style.display = 'none'; // Hide save button
+                document.querySelector('.btn-edit').style.display = 'block'; // Show edit button
             });
         });
 
         function loadTransactions() {
             const walletID = 'Transwease pay 9821';
-            const walletData = JSON.parse(localStorage.getItem(walletID)) || { transactions: [] };
+            const walletData = JSON.parse(localStorage.getItem(walletID)) || { transactions: [] }; // Get wallet data from localStorage
             const transactionTable = document.getElementById('transactionTable');
 
             walletData.transactions.forEach(transaction => {
@@ -305,12 +362,12 @@
                     <td>${transaction.type === 'Transfer' ? (transaction.transferType === 'domestic' ? 'Domestic Transfer' : 'International Transfer') : transaction.type}</td>
                     <td>S$${transaction.amount.toFixed(2)}</td>
                 `;
-                transactionTable.appendChild(row);
+                transactionTable.appendChild(row); // Add transaction row to the table
             });
         }
 
         function loadActiveTransfers() {
-            const activeTransfers = JSON.parse(localStorage.getItem('activeTransfers')) || [];
+            const activeTransfers = JSON.parse(localStorage.getItem('activeTransfers')) || []; // Get active transfers from localStorage
             const activeTransfersTable = document.getElementById('activeTransfersTable');
 
             activeTransfers.forEach(transfer => {
@@ -325,12 +382,16 @@
                     <td>${transfer.amount}</td>
                     <td>${transfer.date}</td>
                 `;
-                activeTransfersTable.appendChild(row);
+                if (transfer.amlFlag) { // Highlight row if there is an AML flag
+                    row.style.backgroundColor = 'red';
+                    row.style.color = 'white';
+                }
+                activeTransfersTable.appendChild(row); // Add transfer row to the table
             });
         }
 
         function loadActiveClaims() {
-            const activeClaims = JSON.parse(localStorage.getItem('claims')) || [];
+            const activeClaims = JSON.parse(localStorage.getItem('claims')) || []; // Get active claims from localStorage
             const claimProcessingTable = document.getElementById('claimProcessingDetails');
 
             activeClaims.forEach(claim => {
@@ -342,24 +403,68 @@
                     <td>${claim.description}</td>
                     <td>${claim.claimDate}</td>
                 `;
-                claimProcessingTable.appendChild(row);
+                claimProcessingTable.appendChild(row); // Add claim row to the table
             });
         }
 
-        function loadActiveDetails(localStorageKey, containerId) {
-            const activeDetails = JSON.parse(localStorage.getItem(localStorageKey)) || [];
-            const container = document.getElementById(containerId);
+        function loadActivePolicies() {
+            const activePolicies = JSON.parse(localStorage.getItem('policies')) || []; // Get active policies from localStorage
+            const policyManagementTable = document.getElementById('policyManagementDetails');
 
-            activeDetails.forEach(claim => {
+            activePolicies.forEach(policy => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td> ${detail.id}</td>
-                    <td> ${detail.type}</td>
-                    <td> ${detail.details}</td>
-                    <td> ${detail.date}</td>
+                    <td>${policy.policyType}</td>
+                    <td>${policy.policyNumber}</td>
+                    <td>${policy.policyHolder}</td>
+                    <td>${policy.startDate}</td>
+                    <td>${policy.endDate}</td>
                 `;
-                container.appendChild(detailDiv);
+                policyManagementTable.appendChild(row); // Add policy row to the table
             });
+        }
+
+        function loadActivePersonalLoans() {
+            const activeLoan = JSON.parse(localStorage.getItem('activeLoan')); // Get active loan from localStorage
+            const personalLoansDetails = document.getElementById('personalLoansDetails');
+
+            if (activeLoan) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${activeLoan.loanAmount}</td>
+                    <td>${activeLoan.loanTerm}</td>
+                    <td>${activeLoan.annualIncome}</td>
+                    <td>${activeLoan.employmentStatus}</td>
+                    <td>${activeLoan.creditScore}</td>
+                    <td>${activeLoan.purpose}</td>
+                    <td>${activeLoan.contactNumber}</td>
+                    <td>${activeLoan.email}</td>
+                    <td>${activeLoan.applicationDate}</td>
+                    <td>${activeLoan.referenceNumber}</td>
+                `;
+                personalLoansDetails.appendChild(row); // Add loan row to the table
+            }
+        }
+
+        function loadActiveMortgageServices() {
+            const mortgageDetails = JSON.parse(localStorage.getItem('mortgageDetails')); // Get mortgage details from localStorage
+            const mortgageServicesDetails = document.getElementById('mortgageServicesDetails');
+
+            if (mortgageDetails) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${mortgageDetails.propertyValue}</td>
+                    <td>${mortgageDetails.downPayment}</td>
+                    <td>${mortgageDetails.loanAmount}</td>
+                    <td>${mortgageDetails.loanTerm}</td>
+                    <td>${mortgageDetails.annualIncome}</td>
+                    <td>${mortgageDetails.employmentStatus}</td>
+                    <td>${mortgageDetails.creditScore}</td>
+                    <td>${mortgageDetails.contactNumber}</td>
+                    <td>${mortgageDetails.email}</td>
+                `;
+                mortgageServicesDetails.appendChild(row); // Add mortgage details row to the table
+            }
         }
     </script>
 </body>

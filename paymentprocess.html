@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Payment Status</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Payment Status</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Linking Bootstrap CSS for styling -->
     <style>
         /* Basic Reset */
         * {
@@ -164,13 +164,13 @@
     <!-- Header -->
     <header>
         <div class="container1">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
-                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> <!-- Link to services page -->
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li> <!-- Link to account page -->
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
@@ -179,8 +179,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Payment Status</h1>
-            <p>Check the status of your recent payment below.</p>
+            <h1>Payment Status</h1> <!-- Hero section title -->
+            <p>Check the status of your recent payment below.</p> <!-- Hero section description -->
         </div>
     </section>
 
@@ -188,14 +188,14 @@
     <section class="content-section">
         <div class="container">
             <div id="paymentStatus" class="payment-status success">
-                <h2>Payment Successful</h2>
-                <p>Your payment has been processed successfully. Thank you for using Transwease.</p>
-                <button class="btn" onclick="window.location.href='services.html'">Back to Services</button>
+                <h2>Payment Successful</h2> <!-- Successful payment status title -->
+                <p>Your payment has been processed successfully. Thank you for using Transwease.</p> <!-- Successful payment status description -->
+                <button class="btn" onclick="window.location.href='services.html'">Back to Services</button> <!-- Button to go back to services page -->
             </div>
             <div id="paymentStatusFailure" class="payment-status failure" style="display: none;">
-                <h2>Payment Failed</h2>
-                <p>Unfortunately, your payment could not be processed. Please try again later or contact support.</p>
-                <button class="btn" onclick="window.location.href='payment.html'">Try Again</button>
+                <h2>Payment Failed</h2> <!-- Failed payment status title -->
+                <p>Unfortunately, your payment could not be processed. Please try again later or contact support.</p> <!-- Failed payment status description -->
+                <button class="btn" onclick="window.location.href='payment.html'">Try Again</button> <!-- Button to retry payment -->
             </div>
         </div>
     </section>
@@ -205,26 +205,26 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                    <h3>About Us</h3> <!-- About Us section -->
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- About Us description -->
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Quick Links section -->
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="signup.html">Sign Up</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a href="signup.html">Sign Up</a></li> <!-- Link to sign-up page -->
+                        <li><a href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Contact Us section -->
+                    <p>Email: transwease@gmail.com</p> <!-- Email address -->
+                    <p>Phone: +65 999</p> <!-- Phone number -->
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright -->
             </div>
         </div>
     </footer>
@@ -237,15 +237,14 @@
             const paymentStatus = urlParams.get('status');
 
             if (paymentStatus === 'success') {
-                document.getElementById('paymentStatus').style.display = 'block';
-                document.getElementById('paymentStatusFailure').style.display = 'none';
+                document.getElementById('paymentStatus').style.display = 'block'; // Show success message
+                document.getElementById('paymentStatusFailure').style.display = 'none'; // Hide failure message
             } else {
-                document.getElementById('paymentStatus').style.display = 'none';
-                document.getElementById('paymentStatusFailure').style.display = 'block';
+                document.getElementById('paymentStatus').style.display = 'none'; // Hide success message
+                document.getElementById('paymentStatusFailure').style.display = 'block'; // Show failure message
             }
         });
     </script>
 
 </body>
 </html>
-

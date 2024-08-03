@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Personal Loan</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Personal Loan</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Linking Bootstrap CSS for styling -->
     <style>
         /* Basic Reset */
         * {
@@ -101,22 +101,22 @@
         }
 
         .back-button {
-            position: fixed;
-            top: 90px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #5d5eb0;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            z-index: 1100; /* Ensure it is above other elements */
+            position: fixed; /* Fixed positioning for back button */
+            top: 90px; /* Top positioning for back button */
+            left: 20px; /* Left positioning for back button */
+            padding: 10px 20px; /* Padding inside back button */
+            background-color: #5d5eb0; /* Background color for back button */
+            color: white; /* Text color for back button */
+            border: none; /* No border for back button */
+            border-radius: 5px; /* Rounded corners for back button */
+            text-decoration: none; /* No underline for back button */
+            font-size: 16px; /* Font size for back button */
+            z-index: 1100; /* Higher z-index for back button */
         }
 
         .back-button:hover {
-            background-color: #6e92aa;
-            color: white;
+            background-color: #6e92aa; /* Hover background color for back button */
+            color: white; /* Hover text color for back button */
         }
 
         .loan-form {
@@ -194,13 +194,13 @@
     <!-- Header -->
     <header>
         <div class="container1">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
-                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> <!-- Link to services page -->
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li> <!-- Link to account page -->
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
@@ -209,48 +209,48 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Personal Loans</h1>
-            <p>Flexible and affordable personal loan solutions to meet your financial needs.</p>
+            <h1>Personal Loans</h1> <!-- Hero section title -->
+            <p>Flexible and affordable personal loan solutions to meet your financial needs.</p> <!-- Hero section description -->
         </div>
     </section>
 
     <!-- Back Button -->
-    <a href="services.html" class="back-button">Back to Services</a>
+    <a href="services.html" class="back-button">Back to Services</a> <!-- Back to services button -->
 
     <!-- Loan Form Section -->
     <section class="content-section">
         <div class="container">
             <div class="loan-form">
-                <h2>Apply for a Personal Loan</h2>
-                <p>Fill in the necessary details to apply for a personal loan.</p>
+                <h2>Apply for a Personal Loan</h2> <!-- Loan form section title -->
+                <p>Fill in the necessary details to apply for a personal loan.</p> <!-- Loan form section description -->
                 <form id="loanForm">
                     <div class="form-group">
-                        <label for="loanAmount">Loan Amount</label>
-                        <input type="number" id="loanAmount" name="loanAmount" required>
+                        <label for="loanAmount">Loan Amount</label> <!-- Label for loan amount input -->
+                        <input type="number" id="loanAmount" name="loanAmount" required> <!-- Loan amount input field -->
                     </div>
                     <div class="form-group">
-                        <label for="loanTerm">Loan Term (months)</label>
-                        <input type="number" id="loanTerm" name="loanTerm" required>
+                        <label for="loanTerm">Loan Term (months)</label> <!-- Label for loan term input -->
+                        <input type="number" id="loanTerm" name="loanTerm" required> <!-- Loan term input field -->
                     </div>
                     <div class="form-group">
-                        <label for="annualIncome">Annual Income</label>
-                        <input type="number" id="annualIncome" name="annualIncome" required>
+                        <label for="annualIncome">Annual Income</label> <!-- Label for annual income input -->
+                        <input type="number" id="annualIncome" name="annualIncome" required> <!-- Annual income input field -->
                     </div>
                     <div class="form-group">
-                        <label for="employmentStatus">Employment Status</label>
-                        <select id="employmentStatus" name="employmentStatus" class="form-control" required>
+                        <label for="employmentStatus">Employment Status</label> <!-- Label for employment status input -->
+                        <select id="employmentStatus" name="employmentStatus" class="form-control" required> <!-- Employment status select field -->
                             <option value="employed">Employed</option>
                             <option value="selfEmployed">Self-Employed</option>
                             <option value="unemployed">Unemployed</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="creditScore">Credit Score</label>
-                        <input type="number" id="creditScore" name="creditScore" required>
+                        <label for="creditScore">Credit Score</label> <!-- Label for credit score input -->
+                        <input type="number" id="creditScore" name="creditScore" required> <!-- Credit score input field -->
                     </div>
                     <div class="form-group">
-                        <label for="purpose">Purpose of Loan</label>
-                        <select id="purpose" name="purpose" class="form-control" required>
+                        <label for="purpose">Purpose of Loan</label> <!-- Label for purpose of loan input -->
+                        <select id="purpose" name="purpose" class="form-control" required> <!-- Purpose of loan select field -->
                             <option value="debtConsolidation">Debt Consolidation</option>
                             <option value="homeImprovement">Home Improvement</option>
                             <option value="majorPurchase">Major Purchase</option>
@@ -258,14 +258,14 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="contactNumber">Contact Number</label>
-                        <input type="text" id="contactNumber" name="contactNumber" required>
+                        <label for="contactNumber">Contact Number</label> <!-- Label for contact number input -->
+                        <input type="text" id="contactNumber" name="contactNumber" required> <!-- Contact number input field -->
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label> <!-- Label for email input -->
+                        <input type="email" id="email" name="email" required> <!-- Email input field -->
                     </div>
-                    <button type="submit" class="btn">Submit Application</button>
+                    <button type="submit" class="btn">Submit Application</button> <!-- Submit button -->
                 </form>
             </div>
         </div>
@@ -275,17 +275,17 @@
     <section class="content-section">
         <div class="container">
             <div class="active-loan-container" id="activeLoanContainer">
-                <h2>Active Personal Loan</h2>
-                <p><strong>Loan Amount:</strong> $<span id="activeLoanAmount"></span></p>
-                <p><strong>Loan Term:</strong> <span id="activeLoanTerm"></span> months</p>
-                <p><strong>Annual Income:</strong> $<span id="activeAnnualIncome"></span></p>
-                <p><strong>Employment Status:</strong> <span id="activeEmploymentStatus"></span></p>
-                <p><strong>Credit Score:</strong> <span id="activeCreditScore"></span></p>
-                <p><strong>Purpose of Loan:</strong> <span id="activePurpose"></span></p>
-                <p><strong>Contact Number:</strong> <span id="activeContactNumber"></span></p>
-                <p><strong>Email:</strong> <span id="activeEmail"></span></p>
-                <p><strong>Application Date:</strong> <span id="activeApplicationDate"></span></p>
-                <p><strong>Reference Number:</strong> <span id="activeReferenceNumber"></span></p>
+                <h2>Active Personal Loan</h2> <!-- Active loan section title -->
+                <p><strong>Loan Amount:</strong> $<span id="activeLoanAmount"></span></p> <!-- Active loan amount -->
+                <p><strong>Loan Term:</strong> <span id="activeLoanTerm"></span> months</p> <!-- Active loan term -->
+                <p><strong>Annual Income:</strong> $<span id="activeAnnualIncome"></span></p> <!-- Active annual income -->
+                <p><strong>Employment Status:</strong> <span id="activeEmploymentStatus"></span></p> <!-- Active employment status -->
+                <p><strong>Credit Score:</strong> <span id="activeCreditScore"></span></p> <!-- Active credit score -->
+                <p><strong>Purpose of Loan:</strong> <span id="activePurpose"></span></p> <!-- Active purpose of loan -->
+                <p><strong>Contact Number:</strong> <span id="activeContactNumber"></span></p> <!-- Active contact number -->
+                <p><strong>Email:</strong> <span id="activeEmail"></span></p> <!-- Active email -->
+                <p><strong>Application Date:</strong> <span id="activeApplicationDate"></span></p> <!-- Active application date -->
+                <p><strong>Reference Number:</strong> <span id="activeReferenceNumber"></span></p> <!-- Active reference number -->
             </div>
         </div>
     </section>
@@ -295,26 +295,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>About Us</h3>
-                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                    <h3>About Us</h3> <!-- About Us section -->
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- About Us description -->
                 </div>
                 <div class="col-md-4">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Quick Links section -->
                     <ul class="list-unstyled">
-                        <li><a class="text-white" href="index.html">Home</a></li>
-                        <li><a class="text-white" href="login.html">Login</a></li>
-                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
-                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                        <li><a class="text-white" href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a class="text-white" href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li> <!-- Link to sign-up page -->
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Contact Us section -->
+                    <p>Email: transwease@gmail.com</p> <!-- Email address -->
+                    <p>Phone: +65 999</p> <!-- Phone number -->
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright -->
             </div>
         </div>
     </footer>
@@ -322,7 +322,7 @@
     <script>
         // Form submission handler
         document.getElementById('loanForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
 
             // Get form data
             const formData = new FormData(this);
@@ -332,23 +332,23 @@
 
             // Create loan details object
             const loanDetails = {
-                loanAmount: formData.get('loanAmount'),
-                loanTerm: formData.get('loanTerm'),
-                annualIncome: formData.get('annualIncome'),
-                employmentStatus: formData.get('employmentStatus'),
-                creditScore: formData.get('creditScore'),
-                purpose: formData.get('purpose'),
-                contactNumber: formData.get('contactNumber'),
-                email: formData.get('email'),
-                applicationDate: new Date().toLocaleDateString(),
-                referenceNumber: referenceNumber
+                loanAmount: formData.get('loanAmount'), // Get loan amount from form data
+                loanTerm: formData.get('loanTerm'), // Get loan term from form data
+                annualIncome: formData.get('annualIncome'), // Get annual income from form data
+                employmentStatus: formData.get('employmentStatus'), // Get employment status from form data
+                creditScore: formData.get('creditScore'), // Get credit score from form data
+                purpose: formData.get('purpose'), // Get purpose of loan from form data
+                contactNumber: formData.get('contactNumber'), // Get contact number from form data
+                email: formData.get('email'), // Get email from form data
+                applicationDate: new Date().toLocaleDateString(), // Get current date as application date
+                referenceNumber: referenceNumber // Set generated reference number
             };
 
             // Save loan details to localStorage
             localStorage.setItem('activeLoan', JSON.stringify(loanDetails));
 
-            // Redirect to loan details page
-            window.location.href = 'loanDetails.html';
+            // Redirect to account page to see the active loan details
+            window.location.href = 'account.html';
         });
 
         // Display active loan details on page load
@@ -371,4 +371,3 @@
 
 </body>
 </html>
-

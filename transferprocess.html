@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Transfer Process</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Transfer Process</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Linking Bootstrap CSS for styling -->
     <style>
         /* Basic Reset */
         * {
@@ -133,7 +133,7 @@
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
                     <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -204,20 +204,21 @@
     </footer>
 
     <script>
+        // Event listener for DOMContentLoaded to execute the function when the document is fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            document.getElementById('transferType').textContent = urlParams.get('transferType');
-            document.getElementById('recipientName').textContent = urlParams.get('recipientName');
-            document.getElementById('recipientAccount').textContent = urlParams.get('recipientAccount');
-            document.getElementById('recipientBank').textContent = urlParams.get('recipientBank');
-            document.getElementById('amount').textContent = urlParams.get('amount');
-            document.getElementById('convertedAmount').textContent = urlParams.get('convertedAmount');
-            document.getElementById('platformFee').textContent = urlParams.get('platformFee');
-            document.getElementById('totalAmount').textContent = urlParams.get('totalAmount');
-            document.getElementById('paymentMethod').textContent = urlParams.get('paymentMethod');
-            document.getElementById('transferDate').textContent = new Date().toLocaleDateString();
-            const referenceNumber = 'TRANS' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
-            document.getElementById('referenceNumber').textContent = referenceNumber;
+            const urlParams = new URLSearchParams(window.location.search); // Get URL parameters
+            document.getElementById('transferType').textContent = urlParams.get('transferType'); // Set transfer type
+            document.getElementById('recipientName').textContent = urlParams.get('recipientName'); // Set recipient name
+            document.getElementById('recipientAccount').textContent = urlParams.get('recipientAccount'); // Set recipient account
+            document.getElementById('recipientBank').textContent = urlParams.get('recipientBank'); // Set recipient bank
+            document.getElementById('amount').textContent = urlParams.get('amount'); // Set amount
+            document.getElementById('convertedAmount').textContent = urlParams.get('convertedAmount'); // Set converted amount
+            document.getElementById('platformFee').textContent = urlParams.get('platformFee'); // Set platform fee
+            document.getElementById('totalAmount').textContent = urlParams.get('totalAmount'); // Set total amount
+            document.getElementById('paymentMethod').textContent = urlParams.get('paymentMethod'); // Set payment method
+            document.getElementById('transferDate').textContent = new Date().toLocaleDateString(); // Set transfer date to current date
+            const referenceNumber = 'TRANS' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0'); // Generate reference number
+            document.getElementById('referenceNumber').textContent = referenceNumber; // Set reference number
 
             // Save transfer details in localStorage
             const transferDetails = {
@@ -232,11 +233,11 @@
                 totalAmount: urlParams.get('totalAmount'),
                 paymentMethod: urlParams.get('paymentMethod'),
                 transferDate: new Date().toLocaleDateString(),
-                estimatedArrival: '3-5 Business Days',
-                status: 'In Process',
-                lastUpdated: new Date().toLocaleDateString()
+                estimatedArrival: '3-5 Business Days', // Estimated arrival time for the transfer
+                status: 'In Process', // Initial status of the transfer
+                lastUpdated: new Date().toLocaleDateString() // Last updated date
             };
-            localStorage.setItem(referenceNumber, JSON.stringify(transferDetails));
+            localStorage.setItem(referenceNumber, JSON.stringify(transferDetails)); // Store transfer details in localStorage
         });
     </script>
 

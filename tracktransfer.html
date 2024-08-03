@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Track Transfer</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Track Transfer</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Linking Bootstrap CSS for styling -->
     <style>
         /* Basic Reset */
         * {
@@ -198,7 +198,7 @@
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
                     <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -279,32 +279,30 @@
     </footer>
 
     <script>
+        // Event listener for track button click
         document.getElementById('trackButton').addEventListener('click', function() {
-            const referenceNumber = document.getElementById('referenceNumber').value;
-            const transferDetails = JSON.parse(localStorage.getItem(referenceNumber));
+            const referenceNumber = document.getElementById('referenceNumber').value; // Get reference number from input
+            const transferDetails = JSON.parse(localStorage.getItem(referenceNumber)); // Retrieve transfer details from localStorage
 
-            if (transferDetails) {
-                document.getElementById('trackReferenceNumber').textContent = transferDetails.referenceNumber;
-                document.getElementById('trackTransferType').textContent = transferDetails.transferType;
-                document.getElementById('trackRecipientName').textContent = transferDetails.recipientName;
-                document.getElementById('trackRecipientAccount').textContent = transferDetails.recipientAccount;
-                document.getElementById('trackRecipientBank').textContent = transferDetails.recipientBank;
-                document.getElementById('trackAmount').textContent = transferDetails.amount;
-                document.getElementById('trackPaymentMethod').textContent = transferDetails.paymentMethod;
-                document.getElementById('trackTransferDate').textContent = transferDetails.transferDate;
-                document.getElementById('trackEstimatedArrival').textContent = transferDetails.estimatedArrival;
-                document.getElementById('trackStatus').textContent = transferDetails.status;
-                document.getElementById('trackLastUpdated').textContent = transferDetails.lastUpdated;
+            if (transferDetails) { // If transfer details exist
+                document.getElementById('trackReferenceNumber').textContent = transferDetails.referenceNumber; // Set reference number
+                document.getElementById('trackTransferType').textContent = transferDetails.transferType; // Set transfer type
+                document.getElementById('trackRecipientName').textContent = transferDetails.recipientName; // Set recipient name
+                document.getElementById('trackRecipientAccount').textContent = transferDetails.recipientAccount; // Set recipient account number
+                document.getElementById('trackRecipientBank').textContent = transferDetails.recipientBank; // Set recipient bank name
+                document.getElementById('trackAmount').textContent = transferDetails.amount; // Set amount
+                document.getElementById('trackPaymentMethod').textContent = transferDetails.paymentMethod; // Set payment method
+                document.getElementById('trackTransferDate').textContent = transferDetails.transferDate; // Set transfer date
+                document.getElementById('trackEstimatedArrival').textContent = transferDetails.estimatedArrival; // Set estimated arrival
+                document.getElementById('trackStatus').textContent = transferDetails.status; // Set transfer status
+                document.getElementById('trackLastUpdated').textContent = transferDetails.lastUpdated; // Set last updated date
 
-                document.getElementById('statusContainer').style.display = 'block';
-            } else {
-                alert('No transfer details found for the provided reference number.');
+                document.getElementById('statusContainer').style.display = 'block'; // Show status container
+            } else { // If transfer details do not exist
+                alert('No transfer details found for the provided reference number.'); // Show alert message
             }
         });
     </script>
 
 </body>
 </html>
-
-
-

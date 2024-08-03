@@ -1,177 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Sign Up</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS for additional styling -->
     <style>
         .signup-section {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh;
+            height: 80vh; /* Height of the signup section */
         }
 
         .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
+            background-color: #fff; /* Background color for form container */
+            padding: 20px; /* Padding inside the form container */
+            border-radius: 10px; /* Rounded corners for form container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for form container */
+            max-width: 400px; /* Maximum width for form container */
+            width: 100%; /* Full width for form container */
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Margin below each form group */
         }
 
         .form-group label {
-            display: block;
-            margin-bottom: 5px;
+            display: block; /* Block display for labels */
+            margin-bottom: 5px; /* Margin below labels */
         }
 
         .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 100%; /* Full width for inputs */
+            padding: 10px; /* Padding inside inputs */
+            border: 1px solid #ccc; /* Border for inputs */
+            border-radius: 5px; /* Rounded corners for inputs */
         }
 
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #5cb85c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
+            display: inline-block; /* Inline block display for button */
+            padding: 10px 20px; /* Padding inside button */
+            background-color: #5cb85c; /* Background color for button */
+            color: #fff; /* Text color for button */
+            text-decoration: none; /* No underline for button */
+            border-radius: 5px; /* Rounded corners for button */
+            border: none; /* No border for button */
+            cursor: pointer; /* Pointer cursor for button */
         }
 
         .or-separator {
-            text-align: center;
-            margin: 15px 0;
-            position: relative;
+            text-align: center; /* Center alignment for separator */
+            margin: 15px 0; /* Margin above and below separator */
+            position: relative; /* Relative positioning for separator */
         }
 
         .or-separator span {
-            display: inline-block;
-            padding: 0 10px;
-            background-color: #fff;
-            position: relative;
-            z-index: 1;
+            display: inline-block; /* Inline block display for span */
+            padding: 0 10px; /* Padding inside span */
+            background-color: #fff; /* Background color for span */
+            position: relative; /* Relative positioning for span */
+            z-index: 1; /* Higher z-index for span */
         }
 
         .or-separator::before {
-            content: "";
-            display: block;
-            height: 1px;
-            background-color: #ccc;
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            z-index: 0;
+            content: ""; /* Empty content for pseudo-element */
+            display: block; /* Block display for pseudo-element */
+            height: 1px; /* Height for pseudo-element */
+            background-color: #ccc; /* Background color for pseudo-element */
+            width: 100%; /* Full width for pseudo-element */
+            position: absolute; /* Absolute positioning for pseudo-element */
+            top: 50%; /* Top positioning for pseudo-element */
+            left: 0; /* Left positioning for pseudo-element */
+            z-index: 0; /* Lower z-index for pseudo-element */
         }
 
         .singpass-btn {
-            background-color: #f0ad4e;
-            color: #fff;
-            border: none;
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
+            background-color: #f0ad4e; /* Background color for Singpass button */
+            color: #fff; /* Text color for Singpass button */
+            border: none; /* No border for Singpass button */
+            width: 100%; /* Full width for Singpass button */
+            padding: 10px; /* Padding inside Singpass button */
+            border-radius: 5px; /* Rounded corners for Singpass button */
+            cursor: pointer; /* Pointer cursor for Singpass button */
+        }
+
+        .singpass-img {
+            display: block; /* Block display for Singpass image */
+            margin: 0 auto; /* Center alignment for Singpass image */
+            width: 100px; /* Width for Singpass image */
+            height: auto; /* Auto height for Singpass image */
+        }
+
+        .back-button {
+            position: fixed; /* Fixed positioning for back button */
+            top: 90px; /* Top positioning for back button */
+            left: 20px; /* Left positioning for back button */
+            padding: 10px 20px; /* Padding inside back button */
+            background-color: #5d5eb0; /* Background color for back button */
+            color: white; /* Text color for back button */
+            border: none; /* No border for back button */
+            border-radius: 5px; /* Rounded corners for back button */
+            text-decoration: none; /* No underline for back button */
+            font-size: 16px; /* Font size for back button */
+            z-index: 1100; /* Higher z-index for back button */
+        }
+
+        .back-button:hover {
+            background-color: #6e92aa; /* Hover background color for back button */
+            color: white; /* Hover text color for back button */
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html" class="active">Sign up</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li> <!-- Link to login page -->
+                    <li><a href="signup.html" class="active">Sign up</a></li> <!-- Link to sign-up page -->
+                    <li><a href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
     </header>
+    <a href="index.html" class="back-button">Back to Home</a> <!-- Back to home button -->
     <main class="flex-fill">
         <section class="signup-section">
             <div class="container">
-                <h2>SIGN UP</h2>
+                <h2>SIGN UP</h2> <!-- Signup section title -->
                 <div class="form-container">
                     <form id="signupForm">
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" name="username" required>
+                            <input type="text" id="username" name="username" required> <!-- Username input field -->
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required> <!-- Email input field -->
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" required>
+                            <input type="password" id="password" name="password" required> <!-- Password input field -->
                         </div>
                         <div class="form-group">
                             <label for="confirmPassword">Confirm Password</label>
-                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required> <!-- Confirm password input field -->
                         </div>
-                        <button type="submit" class="btn">Sign Up</button>
+                        <button type="submit" class="btn">Sign Up</button> <!-- Sign up button -->
                     </form>
                     <div class="or-separator">
-                        <span>OR</span>
+                        <span>OR</span> <!-- OR separator -->
                     </div>
-                    <button class="btn singpass-btn">singpass</button>
+                    <a href="https://www.singpass.gov.sg/home/ui/login">
+                        <img src="images/singpassqr.png" alt="Singpass QR Code" class="singpass-img"> <!-- Singpass QR code image -->
+                    </a>
                 </div>
             </div>
         </section>
-    </main>
+    </main><br><br><br><br>
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About Us</h3>
+                    <h3>About Us</h3> <!-- About Us section -->
                     <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Quick Links section -->
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="signup.html">Sign Up</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a href="signup.html">Sign Up</a></li> <!-- Link to sign-up page -->
+                        <li><a href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Contact Us section -->
+                    <p>Email: transwease@gmail.com</p> <!-- Email address -->
+                    <p>Phone: +65 999</p> <!-- Phone number -->
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright -->
             </div>
         </div>
     </footer>
     <script>
+        // Event listener for signup form submission
         document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value; // Get username value
+            const email = document.getElementById('email').value; // Get email value
+            const password = document.getElementById('password').value; // Get password value
+            const confirmPassword = document.getElementById('confirmPassword').value; // Get confirm password value
 
-            if (password !== confirmPassword) {
-                alert('Passwords do not match.');
-                return;
+            if (password !== confirmPassword) { // Check if passwords match
+                alert('Passwords do not match.'); // Alert if passwords do not match
+                return; // Exit function
             }
 
-            const user = {
+            const user = { // Create user object
                 username: username,
                 email: email,
                 password: password,
@@ -179,19 +209,10 @@
                 phone: "+65 1234 5678"  // Default phone, can be customized later
             };
 
-            localStorage.setItem('user', JSON.stringify(user));
-            alert('Sign Up Successful!');
-            window.location.href = 'login.html';
+            localStorage.setItem('user', JSON.stringify(user)); // Store user in localStorage
+            alert('Sign Up Successful!'); // Alert success message
+            window.location.href = 'login.html'; // Redirect to login page
         });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

@@ -1,101 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Services</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Services</title> <!-- Title of the webpage -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS for additional styling -->
     <style>
         .hero {
-            background-image: url('images/hap.jpg');
-            /* Replace with your image path */
+            background-image: url('images/hap.jpg'); /* Replace with your image path */
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 0;
-            text-align: center;
+            padding: 100px 0; /* Padding inside the hero section */
+            text-align: center; /* Center alignment for hero text */
             position: relative;
+        }
+
+        .back-button {
+            position: fixed; /* Fixed positioning for back button */
+            top: 90px; /* Top positioning for back button */
+            left: 20px; /* Left positioning for back button */
+            padding: 10px 20px; /* Padding inside back button */
+            background-color: #5d5eb0; /* Background color for back button */
+            color: white; /* Text color for back button */
+            border: none; /* No border for back button */
+            border-radius: 5px; /* Rounded corners for back button */
+            text-decoration: none; /* No underline for back button */
+            font-size: 16px; /* Font size for back button */
+            z-index: 1100; /* Higher z-index for back button */
+        }
+
+        .back-button:hover {
+            background-color: #6e92aa; /* Hover background color for back button */
+            color: white; /* Hover text color for back button */
+        }
+        .multi-line-heading {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="ewallet.html">E-wallet</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="services.html" class="active">Services</a></li> <!-- Link to services page -->
+                    <li><a href="ewallet.html">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li><a href="account.html">Account</a></li> <!-- Link to account page -->
+                    <li><a href="contactus2.html">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
     </header>
+    <a href="index.html" class="back-button">Log Out</a> <!-- Log out button -->
     <main>
         <section class="hero bg-light py-5">
             <div class="container">
                 <div class="hero-text text-center">
-                    <h2 class="multi-line-heading">Start Aligning Your Financial Transactions with Us for a Seamless, All-in-One Service Experience</h2>
+                    <h2 class="multi-line-heading">Start Aligning Your Financial Transactions with Us for a Seamless, All-in-One Service Experience</h2> <!-- Hero section heading -->
                 </div>
             </div>
         </section>
     </main>
     <div class="header-content text-center my-4">
         <h1 class="btn btn-outline-dark">EWALLET USED:</h1>
-        <a href="ewallet.html" class="btn btn-dark"><h1><b>TRANSWEASE</b></h1></a>
+        <a href="ewallet.html" class="btn btn-dark"><h1><b>TRANSWEASE</b></h1></a> <!-- Button linking to e-wallet page -->
         <div class="search-bar mt-3">
-            <label for="search">Search:</label>
-            <input type="text" id="search" class="form-control d-inline-block" placeholder="Search services..." style="width: 300px;">
+            <label for="search">Search:</label> <!-- Search label -->
+            <input type="text" id="search" class="form-control d-inline-block" placeholder="Search services..." style="width: 300px;"> <!-- Search input field -->
         </div>
     </div>
     <main class="container">
         <div class="row">
             <div class="col-md-6 mb-4">
-                <div class="service" data-options="investment-options">INVESTMENT
+                <div class="service" data-options="investment-options">INVESTMENT <!-- Investment service -->
                     <div class="options investment-options">
-                        <div><a href="research_analysis.html">Research and Analysis</a></div>
-                        <div><a href="investment_advisory.html">Investment Advisory</a></div>
+                        <div><a href="research_analysis.html">Research and Analysis</a></div> <!-- Link to research and analysis page -->
+                        <div><a href="investment_advisory.html">Investment Advisory</a></div> <!-- Link to investment advisory page -->
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service" data-options="payment-options">PAYMENT
+                <div class="service" data-options="payment-options">PAYMENT <!-- Payment service -->
                     <div class="options payment-options">
-                        <div><a href="payment.html">Online Payment</a></div>
+                        <div><a href="payment.html">Online Payment</a></div> <!-- Link to online payment page -->
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service" data-options="transfers-options">TRANSFERS
+                <div class="service" data-options="transfers-options">TRANSFERS <!-- Transfers service -->
                     <div class="options transfers-options">
-                        <div><a href="transfers.html">Domestic / International Transfers</a></div>
-                        <div><a href="tracktransfer.html">Track Transfers</a></div>
+                        <div><a href="transfers.html">Domestic / International Transfers</a></div> <!-- Link to transfers page -->
+                        <div><a href="tracktransfer.html">Track Transfers</a></div> <!-- Link to track transfers page -->
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service" data-options="insurance-options">INSURANCE
+                <div class="service" data-options="insurance-options">INSURANCE <!-- Insurance service -->
                     <div class="options insurance-options">
-                        <div><a href="insurancepolicy.html">Policy Management</a></div>
-                        <div><a href="claimprocess.html">Claim Processing</a></div>
+                        <div><a href="insurancepolicy.html">Policy Management</a></div> <!-- Link to policy management page -->
+                        <div><a href="claimprocess.html">Claim Processing</a></div> <!-- Link to claim processing page -->
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service" data-options="lending-options">LENDING
+                <div class="service" data-options="lending-options">LENDING <!-- Lending service -->
                     <div class="options lending-options"> 
-                        <div><a href="personalloan.html">Personal Loans</a></div>
-                        <div><a href="mortgageservices.html">Mortgage Services</a></div>
+                        <div><a href="personalloan.html">Personal Loans</a></div> <!-- Link to personal loans page -->
+                        <div><a href="mortgageservices.html">Mortgage Services</a></div> <!-- Link to mortgage services page -->
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="service" data-options="credit-options">CREDIT
+                <div class="service" data-options="credit-options">CREDIT <!-- Credit service -->
                     <div class="options credit-options">
-                        <div><a href="creditmonitoring.html">Credit Monitoring</a></div>
-                        <div><a href="crediteducation.html">Credit Education</a></div>
+                        <div><a href="creditmonitoring.html">Credit Monitoring</a></div> <!-- Link to credit monitoring page -->
+                        <div><a href="crediteducation.html">Credit Education</a></div> <!-- Link to credit education page -->
                     </div>
                 </div>
             </div>
@@ -105,59 +130,73 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>About Us</h3>
+                    <h3>About Us</h3> <!-- About Us section -->
                     <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Quick Links section -->
                     <ul class="list-unstyled">
-                        <li><a class="text-white" href="index.html">Home</a></li>
-                        <li><a class="text-white" href="login.html">Login</a></li>
-                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
-                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                        <li><a class="text-white" href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a class="text-white" href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li> <!-- Link to sign-up page -->
+                        <li><a class="text-white" href="contactus2.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Contact Us section -->
+                    <p>Email: transwease@gmail.com</p> <!-- Email address -->
+                    <p>Phone: +65 999</p> <!-- Phone number -->
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright -->
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> <!-- Popper.js library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS library -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const services = document.querySelectorAll('.service');
 
             services.forEach(service => {
                 service.addEventListener('mouseover', function() {
-                    const options = service.querySelector('.options');
+                    const options = service.querySelector('.options'); // Get options div
                     if (options) {
-                        options.style.display = 'flex';
+                        options.style.display = 'flex'; // Show options on mouseover
                     }
                 });
 
                 service.addEventListener('mouseout', function() {
-                    const options = service.querySelector('.options');
+                    const options = service.querySelector('.options'); // Get options div
                     if (options) {
-                        options.style.display = 'none';
+                        options.style.display = 'none'; // Hide options on mouseout
                     }
                 });
 
                 service.addEventListener('click', function() {
-                    const options = service.querySelector('.options');
+                    const options = service.querySelector('.options'); // Get options div
                     if (options) {
                         if (options.style.display === 'flex') {
-                            options.style.display = 'none';
+                            options.style.display = 'none'; // Toggle options visibility on click
                         } else {
                             options.style.display = 'flex';
                         }
+                    }
+                });
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('search');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                services.forEach(service => {
+                    const serviceText = service.textContent.toLowerCase();
+                    if (serviceText.includes(searchTerm)) {
+                        service.style.display = 'block'; // Show service if it matches the search term
+                    } else {
+                        service.style.display = 'none'; // Hide service if it does not match the search term
                     }
                 });
             });
@@ -165,15 +204,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

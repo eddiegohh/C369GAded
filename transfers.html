@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Domestic and International Transfers</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Domestic and International Transfers</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Linking Bootstrap CSS for styling -->
     <style>
         /* Basic Reset */
         * {
@@ -203,7 +203,7 @@
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
                     <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -335,6 +335,7 @@
     </footer>
 
     <script>
+        // Exchange rates for different currencies
         const exchangeRates = {
             USD: 1.36,
             EUR: 1.60,
@@ -345,9 +346,11 @@
             CNY: 0.20
         };
 
+        // Event listeners for updating the converted amount
         document.getElementById('currency').addEventListener('change', updateConvertedAmount);
         document.getElementById('amount').addEventListener('input', updateConvertedAmount);
 
+        // Function to update the converted amount based on selected currency and input amount
         function updateConvertedAmount() {
             const amount = parseFloat(document.getElementById('amount').value) || 0;
             const currency = document.getElementById('currency').value;
@@ -362,12 +365,14 @@
         var authCodeInput = document.getElementById('authCode');
         var generatedCode = '';
 
+        // Event listener for generating authentication code
         generateCodeButton.addEventListener('click', function() {
             generatedCode = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit code
             alert('Your authentication code is: ' + generatedCode);
             submitButton.disabled = false;
         });
 
+        // Event listener for validating authentication code before form submission
         submitButton.addEventListener('click', function(event) {
             if (authCodeInput.value !== generatedCode) {
                 event.preventDefault();
@@ -378,23 +383,27 @@
             }
         });
 
+        // Function to submit the transfer form and handle the transfer logic
         function submitTransferForm() {
             const walletID = 'Transwease pay 9821';
             const walletData = JSON.parse(localStorage.getItem(walletID)) || { balance: 999999.52, transactions: [] };
             const amount = parseFloat(document.getElementById('convertedAmount').value);
+            const platformFee = 2.00; // Fixed platform fee
+            const totalAmount = amount + platformFee;
             
-            if (amount > walletData.balance) {
+            if (totalAmount > walletData.balance) {
                 alert('Insufficient balance. Please top up your wallet.');
                 return;
             }
             
-            walletData.balance -= amount;
+            walletData.balance -= totalAmount;
             walletData.transactions.push({
                 type: 'Transfer',
                 to: document.getElementById('recipientName').value,
                 amount: amount,
                 date: new Date().toLocaleDateString(),
-                transferType: document.getElementById('transferType').value
+                transferType: document.getElementById('transferType').value,
+                amlFlag: amount > 10000 // Flag if the amount is greater than 10,000
             });
             localStorage.setItem(walletID, JSON.stringify(walletData));
 
@@ -409,17 +418,23 @@
                 recipientAccount: document.getElementById('recipientAccount').value,
                 currency: document.getElementById('currency').value,
                 amount: amount,
-                date: new Date().toLocaleDateString()
+                platformFee: platformFee, // Add platform fee
+                totalAmount: totalAmount, // Add total amount
+                date: new Date().toLocaleDateString(),
+                amlFlag: amount > 10000 // Flag if the amount is greater than 10,000
             };
             activeTransfers.push(transferDetails);
             localStorage.setItem('activeTransfers', JSON.stringify(activeTransfers));
 
             const form = document.getElementById('transferForm');
             const formData = new FormData(form);
+            formData.append('platformFee', platformFee); // Append platform fee to form data
+            formData.append('totalAmount', totalAmount); // Append total amount to form data
             const queryString = new URLSearchParams(formData).toString();
             window.location.href = 'transferprocess.html?' + queryString;
         }
 
+        // Function to load active transfers from local storage and display them
         function loadActiveTransfers() {
             const activeTransfers = JSON.parse(localStorage.getItem('activeTransfers')) || [];
             const activeTransfersList = document.getElementById('activeTransfersList');
@@ -437,13 +452,18 @@
                     <p><strong>Amount:</strong> ${transfer.amount}</p>
                     <p><strong>Date:</strong> ${transfer.date}</p>
                 `;
+                if (transfer.amlFlag) {
+                    transferItem.style.backgroundColor = 'red';
+                    transferItem.style.color = 'white';
+                    transferItem.innerHTML += `<p><strong>Note:</strong> This transaction is suspected of money laundering.</p>`;
+                }
                 activeTransfersList.appendChild(transferItem);
             });
         }
 
+        // Event listener to load active transfers on page load
         document.addEventListener('DOMContentLoaded', loadActiveTransfers);
     </script>
 
 </body>
 </html>
-

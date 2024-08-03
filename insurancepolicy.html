@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Insurance Policy Management</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Insurance Policy Management</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Link to Bootstrap CSS -->
     <style>
         /* Basic Reset */
         * {
@@ -15,179 +15,179 @@
 
         /* Container */
         .container1 {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            width: 90%; /* Width set to 90% of the viewport */
+            max-width: 1200px; /* Maximum width of 1200px */
+            margin: auto; /* Center the container */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Align items vertically center */
+            justify-content: space-between; /* Distribute items with space between */
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
         }
 
         /* Header */
         header {
-            background: #e6f0ef;
-            padding: 20px 0;
-            border-bottom: 5px solid #e6f0ef;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            background: #e6f0ef; /* Background color */
+            padding: 20px 0; /* Padding top and bottom */
+            border-bottom: 5px solid #e6f0ef; /* Bottom border */
+            position: fixed; /* Fix position to the top */
+            width: 100%; /* Full width */
+            top: 0; /* Position at the top */
+            z-index: 1000; /* Ensure it is above other elements */
         }
         header h1 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin: 0;
+            font-size: 24px; /* Font size */
+            color: #2c3e50; /* Font color */
+            margin: 0; /* No margin */
         }
         nav ul {
-            list-style: none;
-            display: flex;
+            list-style: none; /* Remove list bullets */
+            display: flex; /* Flexbox for alignment */
         }
         nav ul li {
-            margin-left: 20px;
+            margin-left: 20px; /* Space between list items */
         }
         nav ul li a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-size: 16px;
+            text-decoration: none; /* Remove underline */
+            color: #2c3e50; /* Link color */
+            font-size: 16px; /* Font size */
         }
         body {
-            font-family: Arial, sans-serif;
-            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+            font-family: Arial, sans-serif; /* Font family */
+            padding-top: 80px; /* Padding top to ensure content doesn't hide under the fixed header */
         }
 
         .hero {
-            background-image: url('images/insurance.jpg'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
+            background-image: url('images/insurance.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire section */
+            background-position: center; /* Center the image */
+            color: white; /* Text color */
+            padding: 100px 0; /* Padding top and bottom */
+            text-align: center; /* Center align text */
+            position: relative; /* Relative positioning */
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3rem; /* Large font size */
+            margin-bottom: 20px; /* Space below heading */
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.2rem; /* Font size */
         }
 
         .content-section {
-            padding: 50px 0;
+            padding: 50px 0; /* Padding top and bottom */
         }
 
         .content-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2rem; /* Font size */
+            margin-bottom: 20px; /* Space below heading */
         }
 
         .content-section p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.1rem; /* Font size */
+            line-height: 1.6; /* Line height */
         }
 
         .content-section .img-container {
-            text-align: center;
-            margin: 30px 0;
+            text-align: center; /* Center align images */
+            margin: 30px 0; /* Space above and below images */
         }
 
         .content-section .img-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+            max-width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
         }
 
         .back-button {
-            position: fixed;
-            top: 90px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #5d5eb0;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
+            position: fixed; /* Fix position */
+            top: 90px; /* Position from the top */
+            left: 20px; /* Position from the left */
+            padding: 10px 20px; /* Padding inside the button */
+            background-color: #5d5eb0; /* Background color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Font size */
             z-index: 1100; /* Ensure it is above other elements */
         }
 
         .back-button:hover {
-            background-color: #6e92aa;
-            color: white;
+            background-color: #6e92aa; /* Background color on hover */
+            color: white; /* Text color on hover */
         }
 
         .policy-form {
-            background-color: #ffffff;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            max-width: 600px;
-            margin: auto;
+            background-color: #ffffff; /* Background color */
+            padding: 30px; /* Padding inside the form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+            border-radius: 8px; /* Rounded corners */
+            max-width: 600px; /* Maximum width */
+            margin: auto; /* Center the form */
         }
 
         .policy-form h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
+            font-size: 1.5rem; /* Font size */
+            margin-bottom: 20px; /* Space below heading */
+            color: #2c3e50; /* Font color */
         }
 
         .policy-form .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* Space below each form group */
         }
 
         .policy-form label {
-            font-size: 1rem;
-            color: #6c757d;
+            font-size: 1rem; /* Font size */
+            color: #6c757d; /* Font color */
         }
 
         .policy-form input, .policy-form select {
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-            border: 2px solid #ced4da;
-            border-radius: 5px;
-            background-color: #f8f9fa;
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding inside the inputs */
+            font-size: 1rem; /* Font size */
+            border: 2px solid #ced4da; /* Border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f8f9fa; /* Background color */
         }
 
         .policy-form .btn {
-            background: linear-gradient(to right, #5cb85c, #4cae4c);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-            display: inline-block;
-            border-radius: 5px;
+            background: linear-gradient(to right, #5cb85c, #4cae4c); /* Gradient background */
+            color: #fff; /* Text color */
+            border: none; /* No border */
+            padding: 10px 20px; /* Padding inside the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 18px; /* Font size */
+            transition: background 0.3s; /* Transition effect for background */
+            display: inline-block; /* Inline block display */
+            border-radius: 5px; /* Rounded corners */
         }
 
         .policy-form .btn:hover {
-            background: linear-gradient(to right, #4cae4c, #5cb85c);
+            background: linear-gradient(to right, #4cae4c, #5cb85c); /* Gradient background on hover */
         }
 
         .active-policies {
-            margin-top: 50px;
+            margin-top: 50px; /* Space above the active policies section */
         }
 
         .policy {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            background-color: #f8f9fa; /* Background color */
+            padding: 20px; /* Padding inside the policy */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Space below each policy */
         }
 
         .policy h3 {
-            margin-bottom: 10px;
-            color: #2c3e50;
+            margin-bottom: 10px; /* Space below heading */
+            color: #2c3e50; /* Font color */
         }
 
         .policy p {
-            margin-bottom: 5px;
-            font-size: 1rem;
-            color: #6c757d;
+            margin-bottom: 5px; /* Space below each paragraph */
+            font-size: 1rem; /* Font size */
+            color: #6c757d; /* Font color */
         }
     </style>
 </head>
@@ -196,13 +196,13 @@
     <!-- Header -->
     <header>
         <div class="container1">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
-                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> <!-- Link to services page -->
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li> <!-- Link to account page -->
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
@@ -211,46 +211,46 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Insurance Policy Management</h1>
-            <p>Manage and review your insurance policies with ease.</p>
+            <h1>Insurance Policy Management</h1> <!-- Section title -->
+            <p>Manage and review your insurance policies with ease.</p> <!-- Section description -->
         </div>
     </section>
 
     <!-- Back Button -->
-    <a href="services.html" class="back-button">Back</a>
+    <a href="services.html" class="back-button">Back</a> <!-- Back to services button -->
 
     <!-- Policy Form Section -->
     <section class="content-section">
         <div class="container">
             <div class="policy-form">
-                <h2>Submit New Policy</h2>
+                <h2>Submit New Policy</h2> <!-- Form title -->
                 <form id="policyForm">
                     <div class="form-group">
-                        <label for="policyType">Policy Type</label>
+                        <label for="policyType">Policy Type</label> <!-- Label for policy type -->
                         <select id="policyType" name="policyType" class="form-control" required>
-                            <option value="health">Health Insurance</option>
-                            <option value="life">Life Insurance</option>
-                            <option value="vehicle">Vehicle Insurance</option>
-                            <option value="home">Home Insurance</option>
+                            <option value="health">Health Insurance</option> <!-- Option for health insurance -->
+                            <option value="life">Life Insurance</option> <!-- Option for life insurance -->
+                            <option value="vehicle">Vehicle Insurance</option> <!-- Option for vehicle insurance -->
+                            <option value="home">Home Insurance</option> <!-- Option for home insurance -->
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="policyNumber">Policy Number</label>
-                        <input type="text" id="policyNumber" name="policyNumber" required>
+                        <label for="policyNumber">Policy Number</label> <!-- Label for policy number -->
+                        <input type="text" id="policyNumber" name="policyNumber" required> <!-- Input for policy number -->
                     </div>
                     <div class="form-group">
-                        <label for="policyHolder">Policy Holder's Name</label>
-                        <input type="text" id="policyHolder" name="policyHolder" required>
+                        <label for="policyHolder">Policy Holder's Name</label> <!-- Label for policy holder's name -->
+                        <input type="text" id="policyHolder" name="policyHolder" required> <!-- Input for policy holder's name -->
                     </div>
                     <div class="form-group">
-                        <label for="startDate">Start Date</label>
-                        <input type="date" id="startDate" name="startDate" required>
+                        <label for="startDate">Start Date</label> <!-- Label for start date -->
+                        <input type="date" id="startDate" name="startDate" required> <!-- Input for start date -->
                     </div>
                     <div class="form-group">
-                        <label for="endDate">End Date</label>
-                        <input type="date" id="endDate" name="endDate" required>
+                        <label for="endDate">End Date</label> <!-- Label for end date -->
+                        <input type="date" id="endDate" name="endDate" required> <!-- Input for end date -->
                     </div>
-                    <button type="submit" class="btn">Submit Policy</button>
+                    <button type="submit" class="btn">Submit Policy</button> <!-- Submit button -->
                 </form>
             </div>
         </div>
@@ -259,8 +259,8 @@
     <!-- Active Policies Section -->
     <section class="content-section active-policies">
         <div class="container">
-            <h2>Active Policies</h2>
-            <div id="activePolicies"></div>
+            <h2>Active Policies</h2> <!-- Section title for active policies -->
+            <div id="activePolicies"></div> <!-- Container for active policies -->
         </div>
     </section>
 
@@ -269,26 +269,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>About Us</h3>
-                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                    <h3>About Us</h3> <!-- Footer section title -->
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- Description about the company -->
                 </div>
                 <div class="col-md-4">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Footer section title -->
                     <ul class="list-unstyled">
-                        <li><a class="text-white" href="index.html">Home</a></li>
-                        <li><a class="text-white" href="login.html">Login</a></li>
-                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
-                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                        <li><a class="text-white" href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a class="text-white" href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li> <!-- Link to sign up page -->
+                        <li><a class="text-white" href="contactus2.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Footer section title -->
+                    <p>Email: transwease@gmail.com</p> <!-- Company email -->
+                    <p>Phone: +65 999</p> <!-- Company phone number -->
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright text -->
             </div>
         </div>
     </footer>
@@ -299,7 +299,7 @@
             const activePoliciesContainer = document.getElementById('activePolicies');
 
             policyForm.addEventListener('submit', function(event) {
-                event.preventDefault();
+                event.preventDefault(); // Prevent form submission
                 
                 const policyType = document.getElementById('policyType').value;
                 const policyNumber = document.getElementById('policyNumber').value;
@@ -315,39 +315,38 @@
                     endDate
                 };
 
-                addPolicyToDOM(policy);
-                savePolicy(policy);
+                addPolicyToDOM(policy); // Add the policy to the DOM
+                savePolicy(policy); // Save the policy to localStorage
             });
 
             function addPolicyToDOM(policy) {
-                const policyDiv = document.createElement('div');
-                policyDiv.classList.add('policy');
+                const policyDiv = document.createElement('div'); // Create a new div element
+                policyDiv.classList.add('policy'); // Add the 'policy' class to the div
 
                 policyDiv.innerHTML = `
-                    <h3>${policy.policyType} - ${policy.policyNumber}</h3>
-                    <p><strong>Policy Holder:</strong> ${policy.policyHolder}</p>
-                    <p><strong>Start Date:</strong> ${policy.startDate}</p>
-                    <p><strong>End Date:</strong> ${policy.endDate}</p>
+                    <h3>${policy.policyType} - ${policy.policyNumber}</h3> <!-- Display policy type and number -->
+                    <p><strong>Policy Holder:</strong> ${policy.policyHolder}</p> <!-- Display policy holder's name -->
+                    <p><strong>Start Date:</strong> ${policy.startDate}</p> <!-- Display start date -->
+                    <p><strong>End Date:</strong> ${policy.endDate}</p> <!-- Display end date -->
                 `;
 
-                activePoliciesContainer.appendChild(policyDiv);
+                activePoliciesContainer.appendChild(policyDiv); // Append the policy div to the container
             }
 
             function savePolicy(policy) {
-                let policies = JSON.parse(localStorage.getItem('policies')) || [];
-                policies.push(policy);
-                localStorage.setItem('policies', JSON.stringify(policies));
+                let policies = JSON.parse(localStorage.getItem('policies')) || []; // Get existing policies from localStorage
+                policies.push(policy); // Add the new policy to the array
+                localStorage.setItem('policies', JSON.stringify(policies)); // Save the updated policies array to localStorage
             }
 
             function loadPolicies() {
-                const policies = JSON.parse(localStorage.getItem('policies')) || [];
-                policies.forEach(addPolicyToDOM);
+                const policies = JSON.parse(localStorage.getItem('policies')) || []; // Get existing policies from localStorage
+                policies.forEach(addPolicyToDOM); // Add each policy to the DOM
             }
 
-            loadPolicies();
+            loadPolicies(); // Load existing policies on page load
         });
     </script>
 
 </body>
 </html>
-

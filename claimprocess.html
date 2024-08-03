@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Claim Processing</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Claim Processing</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Link to Bootstrap CSS for styling -->
     <style>
         /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Ensures consistent padding and border sizing */
         }
 
         /* Container */
@@ -32,7 +32,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 1000; /* Ensures the header stays on top */
         }
         header h1 {
             font-size: 24px;
@@ -196,13 +196,13 @@
     <!-- Header -->
     <header>
         <div class="container1">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
-                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> <!-- Link to services page -->
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li> <!-- Link to account page -->
+                    <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
@@ -211,46 +211,46 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Claim Processing</h1>
-            <p>Submit and track your insurance claims with ease.</p>
+            <h1>Claim Processing</h1> <!-- Hero section title -->
+            <p>Submit and track your insurance claims with ease.</p> <!-- Hero section description -->
         </div>
     </section>
 
     <!-- Back Button -->
-    <a href="services.html" class="back-button">Back</a>
+    <a href="services.html" class="back-button">Back</a> <!-- Back button -->
 
     <!-- Claim Form Section -->
     <section class="content-section">
         <div class="container">
             <div class="claim-form">
-                <h2>Submit New Claim</h2>
+                <h2>Submit New Claim</h2> <!-- Section title -->
                 <form id="claimForm">
                     <div class="form-group">
-                        <label for="claimType">Claim Type</label>
+                        <label for="claimType">Claim Type</label> <!-- Label for claim type -->
                         <select id="claimType" name="claimType" class="form-control" required>
-                            <option value="health">Health Claim</option>
-                            <option value="life">Life Claim</option>
-                            <option value="vehicle">Vehicle Claim</option>
-                            <option value="home">Home Claim</option>
+                            <option value="health">Health Claim</option> <!-- Option for health claim -->
+                            <option value="life">Life Claim</option> <!-- Option for life claim -->
+                            <option value="vehicle">Vehicle Claim</option> <!-- Option for vehicle claim -->
+                            <option value="home">Home Claim</option> <!-- Option for home claim -->
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="policyNumber">Policy Number</label>
-                        <input type="text" id="policyNumber" name="policyNumber" required>
+                        <label for="policyNumber">Policy Number</label> <!-- Label for policy number -->
+                        <input type="text" id="policyNumber" name="policyNumber" required> <!-- Input for policy number -->
                     </div>
                     <div class="form-group">
-                        <label for="claimAmount">Claim Amount</label>
-                        <input type="number" id="claimAmount" name="claimAmount" required>
+                        <label for="claimAmount">Claim Amount</label> <!-- Label for claim amount -->
+                        <input type="number" id="claimAmount" name="claimAmount" required> <!-- Input for claim amount -->
                     </div>
                     <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea id="description" name="description" rows="4" required></textarea>
+                        <label for="description">Description</label> <!-- Label for description -->
+                        <textarea id="description" name="description" rows="4" required></textarea> <!-- Textarea for description -->
                     </div>
                     <div class="form-group">
-                        <label for="claimDate">Claim Date</label>
-                        <input type="date" id="claimDate" name="claimDate" required>
+                        <label for="claimDate">Claim Date</label> <!-- Label for claim date -->
+                        <input type="date" id="claimDate" name="claimDate" required> <!-- Input for claim date -->
                     </div>
-                    <button type="submit" class="btn">Submit Claim</button>
+                    <button type="submit" class="btn">Submit Claim</button> <!-- Submit button -->
                 </form>
             </div>
         </div>
@@ -259,8 +259,8 @@
     <!-- Claims List Section -->
     <section class="content-section claims-list">
         <div class="container">
-            <h2>Existing Claims</h2>
-            <div id="claimsList"></div>
+            <h2>Existing Claims</h2> <!-- Section title -->
+            <div id="claimsList"></div> <!-- Container for existing claims -->
         </div>
     </section>
 
@@ -269,27 +269,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>About Us</h3>
-                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                    <h3>About Us</h3> <!-- Footer section title -->
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- Company description -->
                 </div>
                 <div class="col-md-4">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Footer section title -->
                     <ul class="list-unstyled">
-                        <li><a class="text-white" href="index.html">Home</a></li>
-                        <li><a class="text-white" href="policies.html">Policies</a></li>
-                        <li><a class="text-white" href="claims.html">Claims</a></li>
-                        <li><a class="text-white" href="account.html">Account</a></li>
-                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                        <li><a class="text-white" href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a class="text-white" href="policies.html">Policies</a></li> <!-- Link to policies page -->
+                        <li><a class="text-white" href="claims.html">Claims</a></li> <!-- Link to claims page -->
+                        <li><a class="text-white" href="account.html">Account</a></li> <!-- Link to account page -->
+                        <li><a class="text-white" href="contactus.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Footer section title -->
+                    <p>Email: transwease@gmail.com</p> <!-- Company email -->
+                    <p>Phone: +65 999</p> <!-- Company phone number -->
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright text -->
             </div>
         </div>
     </footer>
@@ -300,8 +300,8 @@
             const claimsList = document.getElementById('claimsList');
 
             claimForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
+                event.preventDefault(); // Prevent default form submission
+
                 const claimType = document.getElementById('claimType').value;
                 const policyNumber = document.getElementById('policyNumber').value;
                 const claimAmount = document.getElementById('claimAmount').value;
@@ -316,8 +316,8 @@
                     claimDate
                 };
 
-                addClaimToDOM(claim);
-                saveClaim(claim);
+                addClaimToDOM(claim); // Function to add claim to the DOM
+                saveClaim(claim); // Function to save claim to localStorage
             });
 
             function addClaimToDOM(claim) {
@@ -345,7 +345,7 @@
                 claims.forEach(addClaimToDOM);
             }
 
-            loadClaims();
+            loadClaims(); // Load existing claims on page load
         });
     </script>
 

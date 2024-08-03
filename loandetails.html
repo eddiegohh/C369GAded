@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transwease - Loan Details</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Transwease - Loan Details</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Link to Bootstrap CSS -->
     <style>
         /* Basic Reset */
         * {
@@ -15,125 +15,125 @@
 
         /* Container */
         .container1 {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            width: 90%; /* Width set to 90% of the viewport */
+            max-width: 1200px; /* Maximum width of 1200px */
+            margin: auto; /* Center the container */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Align items vertically center */
+            justify-content: space-between; /* Distribute items with space between */
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
         }
 
         /* Header */
         header {
-            background: #e6f0ef;
-            padding: 20px 0;
-            border-bottom: 5px solid #e6f0ef;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            background: #e6f0ef; /* Background color */
+            padding: 20px 0; /* Padding top and bottom */
+            border-bottom: 5px solid #e6f0ef; /* Bottom border */
+            position: fixed; /* Fix position to the top */
+            width: 100%; /* Full width */
+            top: 0; /* Position at the top */
+            z-index: 1000; /* Ensure it is above other elements */
         }
         header h1 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin: 0;
+            font-size: 24px; /* Font size */
+            color: #2c3e50; /* Font color */
+            margin: 0; /* No margin */
         }
         nav ul {
-            list-style: none;
-            display: flex;
+            list-style: none; /* Remove list bullets */
+            display: flex; /* Flexbox for alignment */
         }
         nav ul li {
-            margin-left: 20px;
+            margin-left: 20px; /* Space between list items */
         }
         nav ul li a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-size: 16px;
+            text-decoration: none; /* Remove underline */
+            color: #2c3e50; /* Link color */
+            font-size: 16px; /* Font size */
         }
         body {
-            font-family: Arial, sans-serif;
-            padding-top: 80px; /* To ensure the content doesn't hide under the fixed header */
+            font-family: Arial, sans-serif; /* Font family */
+            padding-top: 80px; /* Padding top to ensure content doesn't hide under the fixed header */
         }
 
         .hero {
-            background-image: url('images/loan.jpg'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
+            background-image: url('images/loan.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire section */
+            background-position: center; /* Center the image */
+            color: white; /* Text color */
+            padding: 100px 0; /* Padding top and bottom */
+            text-align: center; /* Center align text */
+            position: relative; /* Relative positioning */
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3rem; /* Large font size */
+            margin-bottom: 20px; /* Space below heading */
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.2rem; /* Font size */
         }
 
         .content-section {
-            padding: 50px 0;
+            padding: 50px 0; /* Padding top and bottom */
         }
 
         .content-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2rem; /* Font size */
+            margin-bottom: 20px; /* Space below heading */
         }
 
         .content-section p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.1rem; /* Font size */
+            line-height: 1.6; /* Line height */
         }
 
         .content-section .img-container {
-            text-align: center;
-            margin: 30px 0;
+            text-align: center; /* Center align images */
+            margin: 30px 0; /* Space above and below images */
         }
 
         .content-section .img-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+            max-width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
         }
 
         .back-button {
-            position: fixed;
-            top: 90px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #5d5eb0;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
+            position: fixed; /* Fix position */
+            top: 90px; /* Position from the top */
+            left: 20px; /* Position from the left */
+            padding: 10px 20px; /* Padding inside the button */
+            background-color: #5d5eb0; /* Background color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Font size */
             z-index: 1100; /* Ensure it is above other elements */
         }
 
         .back-button:hover {
-            background-color: #6e92aa;
-            color: white;
+            background-color: #6e92aa; /* Background color on hover */
+            color: white; /* Text color on hover */
         }
 
         .details-container {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
+            background-color: #f8f9fa; /* Background color */
+            padding: 20px; /* Padding inside the container */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 600px; /* Maximum width */
             margin: 0 auto; /* Center the container */
         }
 
         .details-container h3 {
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* Space below heading */
         }
 
         .details-container p {
-            margin-bottom: 10px;
-            font-size: 1rem;
+            margin-bottom: 10px; /* Space below paragraphs */
+            font-size: 1rem; /* Font size */
         }
     </style>
 </head>
@@ -142,13 +142,13 @@
     <!-- Header -->
     <header>
         <div class="container1">
-            <h1>Transwease</h1>
+            <h1>Transwease</h1> <!-- Website title -->
             <nav>
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li>
-                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li>
-                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> <!-- Link to services page -->
+                    <li class="nav-item"><a href="ewallet.html" class="nav-link">E-wallet</a></li> <!-- Link to e-wallet page -->
+                    <li class="nav-item"><a href="account.html" class="nav-link">Account</a></li> <!-- Link to account page -->
+                    <li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li> <!-- Link to contact us page -->
                 </ul>
             </nav>
         </div>
@@ -157,30 +157,30 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container1">
-            <h1>Loan Details</h1>
-            <p>Review the details of your personal loan.</p>
+            <h1>Loan Details</h1> <!-- Section title -->
+            <p>Review the details of your personal loan.</p> <!-- Section description -->
         </div>
     </section>
 
     <!-- Back Button -->
-    <a href="services.html" class="back-button">Back to Services</a>
+    <a href="services.html" class="back-button">Back to Services</a> <!-- Back to services button -->
 
     <!-- Content Section -->
     <section class="content-section">
         <div class="container">
             <div class="details-container">
-                <h2>Loan Details</h2>
-                <h3>General Information</h3>
-                <p><strong>Loan Amount:</strong> $<span id="loanAmount"></span></p>
-                <p><strong>Loan Term:</strong> <span id="loanTerm"></span> months</p>
-                <p><strong>Annual Income:</strong> $<span id="annualIncome"></span></p>
-                <p><strong>Employment Status:</strong> <span id="employmentStatus"></span></p>
-                <p><strong>Credit Score:</strong> <span id="creditScore"></span></p>
-                <p><strong>Purpose of Loan:</strong> <span id="purpose"></span></p>
-                <p><strong>Contact Number:</strong> <span id="contactNumber"></span></p>
-                <p><strong>Email:</strong> <span id="email"></span></p>
-                <p><strong>Application Date:</strong> <span id="applicationDate"></span></p>
-                <p><strong>Reference Number:</strong> <span id="referenceNumber"></span></p>
+                <h2>Loan Details</h2> <!-- Section title -->
+                <h3>General Information</h3> <!-- Subsection title -->
+                <p><strong>Loan Amount:</strong> $<span id="loanAmount"></span></p> <!-- Loan amount -->
+                <p><strong>Loan Term:</strong> <span id="loanTerm"></span> months</p> <!-- Loan term -->
+                <p><strong>Annual Income:</strong> $<span id="annualIncome"></span></p> <!-- Annual income -->
+                <p><strong>Employment Status:</strong> <span id="employmentStatus"></span></p> <!-- Employment status -->
+                <p><strong>Credit Score:</strong> <span id="creditScore"></span></p> <!-- Credit score -->
+                <p><strong>Purpose of Loan:</strong> <span id="purpose"></span></p> <!-- Purpose of loan -->
+                <p><strong>Contact Number:</strong> <span id="contactNumber"></span></p> <!-- Contact number -->
+                <p><strong>Email:</strong> <span id="email"></span></p> <!-- Email address -->
+                <p><strong>Application Date:</strong> <span id="applicationDate"></span></p> <!-- Application date -->
+                <p><strong>Reference Number:</strong> <span id="referenceNumber"></span></p> <!-- Reference number -->
             </div>
         </div>
     </section>
@@ -190,48 +190,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>About Us</h3>
-                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p>
+                    <h3>About Us</h3> <!-- About Us section title -->
+                    <p>Transwease is your one-stop solution for all your financial transaction needs. We provide fast, secure, and reliable services tailored just for you.</p> <!-- About Us description -->
                 </div>
                 <div class="col-md-4">
-                    <h3>Quick Links</h3>
+                    <h3>Quick Links</h3> <!-- Quick Links section title -->
                     <ul class="list-unstyled">
-                        <li><a class="text-white" href="index.html">Home</a></li>
-                        <li><a class="text-white" href="login.html">Login</a></li>
-                        <li><a class="text-white" href="signup.html">Sign Up</a></li>
-                        <li><a class="text-white" href="contactus.html">Contact Us</a></li>
+                        <li><a class="text-white" href="index.html">Home</a></li> <!-- Link to home page -->
+                        <li><a class="text-white" href="login.html">Login</a></li> <!-- Link to login page -->
+                        <li><a class="text-white" href="signup.html">Sign Up</a></li> <!-- Link to sign-up page -->
+                        <li><a class="text-white" href="contactus2.html">Contact Us</a></li> <!-- Link to contact us page -->
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Us</h3>
-                    <p>Email: transwease@gmail.com</p>
-                    <p>Phone: +65 999</p>
+                    <h3>Contact Us</h3> <!-- Contact Us section title -->
+                    <p>Email: transwease@gmail.com</p> <!-- Contact email -->
+                    <p>Phone: +65 999</p> <!-- Contact phone number -->
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>&copy; 2024 Transwease. All rights reserved.</p>
+                <p>&copy; 2024 Transwease. All rights reserved.</p> <!-- Footer copyright -->
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const activeLoan = JSON.parse(localStorage.getItem('activeLoan'));
+            const activeLoan = JSON.parse(localStorage.getItem('activeLoan')); // Retrieve active loan details from localStorage
             if (activeLoan) {
-                document.getElementById('loanAmount').textContent = activeLoan.loanAmount;
-                document.getElementById('loanTerm').textContent = activeLoan.loanTerm;
-                document.getElementById('annualIncome').textContent = activeLoan.annualIncome;
-                document.getElementById('employmentStatus').textContent = activeLoan.employmentStatus;
-                document.getElementById('creditScore').textContent = activeLoan.creditScore;
-                document.getElementById('purpose').textContent = activeLoan.purpose;
-                document.getElementById('contactNumber').textContent = activeLoan.contactNumber;
-                document.getElementById('email').textContent = activeLoan.email;
-                document.getElementById('applicationDate').textContent = activeLoan.applicationDate;
-                document.getElementById('referenceNumber').textContent = activeLoan.referenceNumber;
+                document.getElementById('loanAmount').textContent = activeLoan.loanAmount; // Display loan amount
+                document.getElementById('loanTerm').textContent = activeLoan.loanTerm; // Display loan term
+                document.getElementById('annualIncome').textContent = activeLoan.annualIncome; // Display annual income
+                document.getElementById('employmentStatus').textContent = activeLoan.employmentStatus; // Display employment status
+                document.getElementById('creditScore').textContent = activeLoan.creditScore; // Display credit score
+                document.getElementById('purpose').textContent = activeLoan.purpose; // Display purpose of loan
+                document.getElementById('contactNumber').textContent = activeLoan.contactNumber; // Display contact number
+                document.getElementById('email').textContent = activeLoan.email; // Display email address
+                document.getElementById('applicationDate').textContent = activeLoan.applicationDate; // Display application date
+                document.getElementById('referenceNumber').textContent = activeLoan.referenceNumber; // Display reference number
             }
         });
     </script>
 
 </body>
 </html>
-
