@@ -430,6 +430,7 @@
             const formData = new FormData(form);
             formData.append('platformFee', platformFee); // Append platform fee to form data
             formData.append('totalAmount', totalAmount); // Append total amount to form data
+            formData.append('referenceNumber', referenceNumber); // Append reference number to form data
             const queryString = new URLSearchParams(formData).toString();
             window.location.href = 'transferprocess.html?' + queryString;
         }
